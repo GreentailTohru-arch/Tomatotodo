@@ -1,0 +1,143 @@
+.liquid-glass-pane {
+  position: relative;
+  overflow: hidden;
+}
+
+.liquid-glass-pane__filter {
+  position: absolute;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.liquid-glass-pane__blur-replica {
+  position: absolute;
+  inset: -72px;
+  z-index: 0;
+  overflow: hidden;
+  filter: blur(34px) saturate(0.96) contrast(0.94);
+  pointer-events: none;
+}
+
+.liquid-glass-pane__blur-replica > .app-shell {
+  pointer-events: none !important;
+  user-select: none !important;
+}
+
+.liquid-glass-pane__refraction,
+.liquid-glass-pane__cover,
+.liquid-glass-pane__tint,
+.liquid-glass-pane__dispersion,
+.liquid-glass-pane__reflect,
+.liquid-glass-pane__sharp {
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+}
+
+.liquid-glass-pane__refraction {
+  z-index: 2;
+  isolation: isolate;
+}
+
+.liquid-glass-pane__replica {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  border-radius: inherit;
+  filter: blur(1.4px) saturate(1.42) contrast(1.075);
+  opacity: 0.84;
+  -webkit-mask:
+    linear-gradient(to right, #000 0, rgba(0, 0, 0, 0.9) 34%, transparent 100%) left / 34px 100% no-repeat,
+    linear-gradient(to left, #000 0, rgba(0, 0, 0, 0.9) 34%, transparent 100%) right / 34px 100% no-repeat,
+    linear-gradient(to bottom, #000 0, rgba(0, 0, 0, 0.88) 34%, transparent 100%) top / 100% 34px no-repeat,
+    linear-gradient(to top, #000 0, rgba(0, 0, 0, 0.88) 34%, transparent 100%) bottom / 100% 34px no-repeat;
+  mask:
+    linear-gradient(to right, #000 0, rgba(0, 0, 0, 0.9) 34%, transparent 100%) left / 34px 100% no-repeat,
+    linear-gradient(to left, #000 0, rgba(0, 0, 0, 0.9) 34%, transparent 100%) right / 34px 100% no-repeat,
+    linear-gradient(to bottom, #000 0, rgba(0, 0, 0, 0.88) 34%, transparent 100%) top / 100% 34px no-repeat,
+    linear-gradient(to top, #000 0, rgba(0, 0, 0, 0.88) 34%, transparent 100%) bottom / 100% 34px no-repeat;
+}
+
+.liquid-glass-pane__replica > .app-shell {
+  pointer-events: none !important;
+  user-select: none !important;
+}
+
+.liquid-glass-pane__refraction::after {
+  position: absolute;
+  inset: 0;
+  padding: clamp(24px, 8%, 30px);
+  border-radius: inherit;
+  background:
+    linear-gradient(90deg, rgba(255, 255, 255, 0.22), transparent 8%, transparent 91%, rgba(255, 255, 255, 0.13)),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.18), transparent 9%, transparent 90%, rgba(0, 0, 0, 0.16));
+  box-shadow:
+    inset 9px 0 18px -14px rgba(255, 255, 255, 0.92),
+    inset -10px 0 18px -14px rgba(0, 0, 0, 0.72),
+    inset 0 10px 20px -16px rgba(255, 255, 255, 0.85),
+    inset 0 -11px 20px -16px rgba(0, 0, 0, 0.68);
+  content: "";
+  -webkit-mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  mask-composite: exclude;
+}
+
+.liquid-glass-pane__cover {
+  z-index: 1;
+  background: var(--liquid-glass-cover, rgba(255, 255, 255, 0.018));
+  -webkit-backdrop-filter: none;
+  backdrop-filter: none;
+}
+
+.liquid-glass-pane__tint {
+  z-index: 3;
+  background:
+    linear-gradient(132deg, rgba(255, 255, 255, 0.075), transparent 28%, transparent 72%, rgba(255, 255, 255, 0.018)),
+    var(--liquid-glass-tint, rgba(255, 255, 255, 0.022));
+}
+
+.liquid-glass-pane__dispersion {
+  z-index: 3;
+  inset: 1px;
+  border: 1px solid transparent;
+  border-radius: inherit;
+  background:
+    linear-gradient(112deg, rgba(92, 190, 255, 0.22), transparent 18%, transparent 78%, rgba(255, 94, 138, 0.18)) border-box;
+  -webkit-mask: linear-gradient(#000 0 0) padding-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask: linear-gradient(#000 0 0) padding-box, linear-gradient(#000 0 0);
+  mask-composite: exclude;
+  opacity: 0.48;
+}
+
+.liquid-glass-pane__reflect {
+  inset: 1px;
+  z-index: 4;
+  box-shadow:
+    inset 4px 4px 11px rgba(255, 255, 255, 0.25),
+    inset -4px -4px 10px rgba(255, 255, 255, 0.09),
+    inset 0 0 30px rgba(255, 255, 255, 0.045);
+}
+
+.liquid-glass-pane__sharp {
+  z-index: 5;
+  box-shadow:
+    inset 1px 1px 0 rgba(255, 255, 255, 0.86),
+    inset -1px -1px 0 rgba(255, 255, 255, 0.22),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.08);
+}
+
+.liquid-glass-pane__content {
+  position: relative;
+  z-index: 6;
+  width: 100%;
+  height: 100%;
+}
