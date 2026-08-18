@@ -38,7 +38,9 @@ Tomatotodo 是一个开源项目。源代码完整保存在本仓库中，欢迎
 | 工具 | 使用快捷便笺、翻译、计算器和秒表 |
 
 点击当前页面的左上角标题，或再次点击左侧对应导航按钮，可以回到页面顶部。最下方菜单按钮可收起或展开导航文字。
+
 <img width="1802" height="1131" alt="ScreenShot_2026-08-19_043001_260" src="https://github.com/user-attachments/assets/3e69fc02-dafd-4c05-a4e8-3dec26d9dbd5" />
+
 ### 开始第一次专注
 
 1. 在仪表盘“今日任务”中选择准备处理的任务。
@@ -67,6 +69,8 @@ Tomatotodo 是一个开源项目。源代码完整保存在本仓库中，欢迎
 
 仪表盘会显示当前清单名称、任务完成情况及已设置的预计番茄数。点击任务可将其设为当前任务；右侧完成按钮用于切换完成状态。
 
+<img width="1802" height="1131" alt="ScreenShot_2026-08-19_043007_118" src="https://github.com/user-attachments/assets/332a9c88-e654-4f03-b13a-5ae92f5af437" />
+
 ### 编辑仪表盘
 
 1. 点击仪表盘右上角编辑按钮。
@@ -87,6 +91,8 @@ Tomatotodo 是一个开源项目。源代码完整保存在本仓库中，欢迎
 
 点击日历日期可以查看当日日志。右上角导出按钮会生成固定比例的专注明信片，内容包括今日摘要、专注日志、日期、Logo 和品牌水印。
 
+<img width="1802" height="1131" alt="ScreenShot_2026-08-19_043020_739" src="https://github.com/user-attachments/assets/cf7fdaeb-0508-40e4-b99f-36cc3848d67c" />
+
 ### 调整个性化设置
 
 - 主题模式支持自动、日间和夜间。
@@ -97,6 +103,8 @@ Tomatotodo 是一个开源项目。源代码完整保存在本仓库中，欢迎
 
 Windows 应用的原生标题栏会跟随软件内日间或夜间模式切换。
 
+<img width="1802" height="1131" alt="ScreenShot_2026-08-19_043011_943" src="https://github.com/user-attachments/assets/938fa68b-0705-4bfd-8968-9a11d24ac301" />
+
 ### 使用快捷便笺和工具
 
 - 便笺输入后自动保存，窗口可以拖动并自由叠放。
@@ -105,6 +113,8 @@ Windows 应用的原生标题栏会跟随软件内日间或夜间模式切换。
 - 秒表支持开始、停止、分段记录和清除。
 
 首次启动会自动创建一篇可删除的使用说明便笺。恢复出厂数据后，说明便笺会重新生成。
+
+<img width="1802" height="1131" alt="ScreenShot_2026-08-19_043024_555" src="https://github.com/user-attachments/assets/014c92c7-1b7a-4186-94e8-595c40b51d34" />
 
 ### 使用 Spotify 或本地音乐
 
@@ -120,6 +130,8 @@ Windows 应用的原生标题栏会跟随软件内日间或夜间模式切换。
 出于隐私与兼容性考虑，Spotify 登录令牌、本地音乐文件、文件夹授权、当前计时进度和临时窗口状态不会进入备份。
 
 “恢复出厂数据”需要两次确认。执行后会清除专注档案、用户便笺、媒体授权与缓存，并恢复本版本保存的默认任务和设置模板。
+
+<img width="1802" height="1131" alt="ScreenShot_2026-08-19_043016_433" src="https://github.com/user-attachments/assets/55c70928-f36a-435e-923d-132c7cfe3673" />
 
 ## 主要功能
 
