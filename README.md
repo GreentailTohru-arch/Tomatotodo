@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="./public/icons/icon-192.png" width="112" height="112" alt="Tomatotodo Logo" />
+  <img src="./icon-192.png" width="112" height="112" alt="Tomatotodo Logo" />
 </p>
 
 <h1 align="center">Tomatotodo</h1>
