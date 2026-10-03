@@ -16,3 +16,5 @@
 - Homepage hero uses a full-viewport generated architectural wallpaper, bold editorial typography and untouched real software screenshots. Preserve readable text contrast and mobile safe spacing.
 
 - Include an interactive Windows usage-guide section covering dashboard, task presets, archive, courses, tools and general settings. Describe verified client behavior; only use existing real screenshots and never fabricate page imagery.
+
+- Hero navigation uses a light frosted-glass surface with strong text contrast so navigation stays clearly visible over generated wallpaper.
