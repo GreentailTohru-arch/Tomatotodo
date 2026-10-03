@@ -27,3 +27,5 @@ Create a premium editorial background photograph for the Tomatotodo productivity
 - Appearance controls select these captured files; no website-color changes, screenshot tint filters or generated UI are used.
 
 - All seven Windows screenshots were recaptured on 2026-10-03 with the mouse parked outside the client window to exclude the custom cursor glow. The cover was regenerated from these clean assets with cursor-free browser capture.
+
+- hero-wallpaper.png: built-in ImageGen, 2026-10-03. Prompt: premium warm ivory architectural room, sage sculptural ribbon, circular aperture, morning light, quiet left-side negative space; no text, devices, UI or people. Used as a full-screen hero background.

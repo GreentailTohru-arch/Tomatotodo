@@ -12,3 +12,5 @@
 - Feature phone screenshots show the full original image without cover cropping or negative bottom margins. Appearance swatches select actual software theme screenshots, show the applied software color, and never change website colors or recolor screenshots. Light/dark screenshot changes use a soft crossfade and honor reduced motion.
 
 - Before capturing real client windows, park the mouse outside the window and verify that neither the pointer nor its glow appears. Render promotional covers with cursor-free browser capture.
+
+- Homepage hero uses a full-viewport generated architectural wallpaper, bold editorial typography and untouched real software screenshots. Preserve readable text contrast and mobile safe spacing.
