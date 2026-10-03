@@ -18,3 +18,4 @@
 - Include an interactive Windows usage-guide section covering dashboard, task presets, archive, courses, tools and general settings. Describe verified client behavior; only use existing real screenshots and never fabricate page imagery.
 
 - Hero navigation uses a light frosted-glass surface with strong text contrast so navigation stays clearly visible over generated wallpaper.
+- Promotional hero, experience and feature sections frame intact real captures in coordinated silver laptop, phone and tablet mockups. Preserve complete screen proportions, device safe edges and responsive spacing; usage-guide images remain unframed for legibility.

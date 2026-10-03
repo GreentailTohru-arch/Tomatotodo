@@ -28,7 +28,11 @@ function renderGallery(platform){
   const img=document.createElement('img');img.src='assets/'+file;img.alt=title;img.loading='lazy';
   const heading=document.createElement('strong');heading.textContent=title; const arrow=document.createElementNS('http://www.w3.org/2000/svg','svg'); arrow.setAttribute('class','icon'); arrow.setAttribute('aria-hidden','true'); const use=document.createElementNS('http://www.w3.org/2000/svg','use'); use.setAttribute('href','#i-arrow-up-right'); arrow.append(use);heading.append(arrow);
   const caption=document.createElement('span');caption.textContent=detail;
-  card.append(img,heading,caption);card.addEventListener('click',()=>showImage(img.src,title+' / '+detail));grid.append(card);
+  const kind=platform==='windows'?'laptop':platform==='phone'?'phone':'tablet';
+  const device=document.createElement('div');device.className='device-mockup mockup-'+kind;
+  const screen=document.createElement('div');screen.className='device-screen';screen.append(img);device.append(screen);
+  if(kind==='laptop'){const deck=document.createElement('div');deck.className='laptop-deck';deck.setAttribute('aria-hidden','true');deck.innerHTML='<span class="keyboard"></span><span class="trackpad"></span>';device.append(deck);}
+  card.append(device,heading,caption);card.addEventListener('click',()=>showImage(img.src,title+' / '+detail));grid.append(card);
  });
  document.querySelectorAll('[data-gallery]').forEach(button=>button.setAttribute('aria-pressed',String(button.dataset.gallery===platform)));
 }
