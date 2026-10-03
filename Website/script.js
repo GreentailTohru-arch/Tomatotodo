@@ -34,3 +34,12 @@ function renderGallery(platform){
 }
 document.querySelectorAll('[data-gallery]').forEach(button=>button.addEventListener('click',()=>renderGallery(button.dataset.gallery)));
 renderGallery('windows');
+
+document.querySelectorAll('[data-appearance]').forEach(button=>button.addEventListener('click',()=>{
+ const dark=button.dataset.appearance==='dark';
+ const image=document.querySelector('#appearance-shot');
+ image.src='assets/'+(dark?'windows-dashboard-dark.png':'windows-dashboard.png');
+ image.alt='Windows '+(dark?'深色':'浅色')+'主题实际运行截图';
+ document.querySelector('#appearance-caption').textContent=dark?'深色模式 · 沉静、柔和的夜间工作台':'浅色模式 · 清晰、轻盈的白色工作台';
+ document.querySelectorAll('[data-appearance]').forEach(item=>item.setAttribute('aria-pressed',String(item===button)));
+}));
