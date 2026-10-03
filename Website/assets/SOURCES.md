@@ -25,3 +25,5 @@ Create a premium editorial background photograph for the Tomatotodo productivity
 - windows-blue-light.png / windows-blue-dark.png: actual installed Windows dashboard after selecting #0078D7 and the corresponding appearance mode through the client UI.
 - windows-orange-light.png / windows-orange-dark.png: actual installed Windows dashboard after selecting #DA3B01 and the corresponding appearance mode through the client UI.
 - Appearance controls select these captured files; no website-color changes, screenshot tint filters or generated UI are used.
+
+- All seven Windows screenshots were recaptured on 2026-10-03 with the mouse parked outside the client window to exclude the custom cursor glow. The cover was regenerated from these clean assets with cursor-free browser capture.
