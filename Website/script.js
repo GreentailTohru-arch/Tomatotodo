@@ -1,3 +1,4 @@
+let galleryRevision=0,guideRevision=0,currentGallery=null,currentGuide=null;
 const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 if ('IntersectionObserver' in window && !reducedMotion) {
   document.documentElement.classList.add('js-motion');
@@ -21,7 +22,7 @@ function showImage(src,title) {
 viewer.querySelector('button').addEventListener('click',()=>viewer.close());
 viewer.addEventListener('click',event=>{if(event.target===viewer)viewer.close();});
 viewer.addEventListener('close',()=>previousFocus?.focus());
-function renderGallery(platform){
+function paintGallery(platform){
  const grid=document.querySelector('#gallery-grid');grid.className='gallery-grid '+platform;grid.replaceChildren();
  shots[platform].forEach(([file,title,detail])=>{
   const card=document.createElement('button');card.className='gallery-card';
@@ -70,7 +71,7 @@ const desktopGuide = {
  tools:{image:'windows-tools.png',kicker:'随手处理小事',title:'工具',description:'从软件中快速打开常用系统工具和翻译服务。',steps:[['记下临时想法','打开 Windows 系统便笺，创建或管理临时笔记。'],['进行计算与计时','使用计算器入口打开系统计算器；秒表入口打开 Windows 时钟。'],['查询翻译','点击翻译入口，在默认浏览器中打开 Bing 翻译。']],tip:'这些入口调用 Windows 系统应用或外部网站；工具是否可用取决于本机应用与网络状态。'},
  general:{image:'windows-general.png',kicker:'按你的习惯设置',title:'常规',description:'集中管理计时、外观、课程、账户与版本信息。',steps:[['设置计时节奏','在通用设置中调整专注与短休时长、启用短休，选择手动或自动循环；正向计时用于累计时间。'],['调整软件外观','进入「个性化」，选择浅色、深色或自动模式，并调整主题色与显示大小。'],['管理账户与数据','在账户与用户数据中处理登录、同步、迁移和数据导入导出；在关于与更新中检查更新、查看公告与软件介绍。']],tip:'调整计时时长后，按软件提示重置计时器使新时长生效。迁移或覆盖数据前，先导出备份。'}
 };
-function renderDesktopGuide(key){const item=desktopGuide[key];if(!item)return;document.querySelectorAll('[data-guide]').forEach(button=>button.setAttribute('aria-pressed',String(button.dataset.guide===key)));document.querySelector('#guide-kicker').textContent=item.kicker;document.querySelector('#guide-title').textContent=item.title;document.querySelector('#guide-description').textContent=item.description;const list=document.querySelector('#guide-steps');list.replaceChildren();item.steps.forEach(([title,detail])=>{const row=document.createElement('li');const heading=document.createElement('strong');heading.textContent=title;row.append(heading,document.createTextNode(detail));list.append(row);});document.querySelector('#guide-tip').textContent=item.tip;const figure=document.querySelector('#guide-figure');figure.hidden=!item.image;if(item.image){const img=document.querySelector('#guide-image');img.src='assets/'+item.image;img.alt='Windows '+item.title+'实际运行截图';}}
+function paintDesktopGuide(key){const item=desktopGuide[key];if(!item)return;document.querySelectorAll('[data-guide]').forEach(button=>button.setAttribute('aria-pressed',String(button.dataset.guide===key)));document.querySelector('#guide-kicker').textContent=item.kicker;document.querySelector('#guide-title').textContent=item.title;document.querySelector('#guide-description').textContent=item.description;const list=document.querySelector('#guide-steps');list.replaceChildren();item.steps.forEach(([title,detail])=>{const row=document.createElement('li');const heading=document.createElement('strong');heading.textContent=title;row.append(heading,document.createTextNode(detail));list.append(row);});document.querySelector('#guide-tip').textContent=item.tip;const figure=document.querySelector('#guide-figure');figure.hidden=!item.image;if(item.image){const img=document.querySelector('#guide-image');img.src='assets/'+item.image;img.alt='Windows '+item.title+'实际运行截图';}}
 document.querySelectorAll('[data-guide]').forEach(button=>button.addEventListener('click',()=>renderDesktopGuide(button.dataset.guide)));renderDesktopGuide('dashboard');
 
  document.querySelector('#guide-image-button').addEventListener('click',()=>{const img=document.querySelector('#guide-image');showImage(img.src,img.alt);});
@@ -101,3 +102,27 @@ let progressFrame=0;
 function updateReadingProgress(){if(progressFrame)return;progressFrame=requestAnimationFrame(()=>{const length=document.documentElement.scrollHeight-innerHeight;readingProgress.style.transform=`scaleX(${length>0?scrollY/length:0})`;progressFrame=0;});}
 if(!reducedMotion){addEventListener('scroll',updateReadingProgress,{passive:true});addEventListener('resize',updateReadingProgress);updateReadingProgress();}
 if(matchMedia('(hover:hover) and (pointer:fine)').matches){document.querySelectorAll('.download-card').forEach(card=>{card.addEventListener('pointermove',event=>{const rect=card.getBoundingClientRect();card.style.setProperty('--pointer-x',`${event.clientX-rect.left}px`);card.style.setProperty('--pointer-y',`${event.clientY-rect.top}px`);});});}
+
+const assetReadyCache=new Map();
+function assetReady(file){if(!assetReadyCache.has(file)){const img=new Image();img.src='assets/'+file;assetReadyCache.set(file,img.decode().catch(()=>{}));}return assetReadyCache.get(file);}
+function cancelSurfaceMotion(surface){surface.getAnimations({subtree:true}).forEach(animation=>animation.cancel());}
+async function renderGallery(platform){
+ if(platform===currentGallery)return;
+ const revision=++galleryRevision,grid=document.querySelector('#gallery-grid'),initial=currentGallery===null;currentGallery=platform;
+ document.querySelectorAll('[data-gallery]').forEach(button=>button.setAttribute('aria-pressed',String(button.dataset.gallery===platform)));
+ cancelSurfaceMotion(grid);
+ if(!initial&&!reducedMotion){await Promise.all([Promise.all(shots[platform].map(([file])=>assetReady(file))),grid.animate([{opacity:1,translate:'0 0'},{opacity:0,translate:'0 -10px'}],{duration:140,easing:'ease-out'}).finished.catch(()=>{})]);}
+ if(revision!==galleryRevision)return;
+ paintGallery(platform);
+ if(!initial&&!reducedMotion)grid.querySelectorAll('.gallery-card').forEach((card,index)=>card.animate([{opacity:0,translate:'0 24px',scale:'.98'},{opacity:1,translate:'0 0',scale:'1'}],{duration:550,delay:index*65,fill:'backwards',easing:'cubic-bezier(.16,1,.3,1)'}));
+}
+async function renderDesktopGuide(key){
+ if(key===currentGuide||!desktopGuide[key])return;
+ const revision=++guideRevision,panel=document.querySelector('.guide-panel'),initial=currentGuide===null;currentGuide=key;
+ document.querySelectorAll('[data-guide]').forEach(button=>button.setAttribute('aria-pressed',String(button.dataset.guide===key)));
+ cancelSurfaceMotion(panel);
+ if(!initial&&!reducedMotion){await Promise.all([assetReady(desktopGuide[key].image),panel.animate([{opacity:1,translate:'0 0'},{opacity:0,translate:'0 -8px'}],{duration:130,easing:'ease-out'}).finished.catch(()=>{})]);}
+ if(revision!==guideRevision)return;
+ paintDesktopGuide(key);
+ if(!initial&&!reducedMotion){panel.animate([{opacity:0,translate:'0 18px'},{opacity:1,translate:'0 0'}],{duration:450,easing:'cubic-bezier(.16,1,.3,1)'});panel.querySelectorAll('#guide-steps li').forEach((row,index)=>row.animate([{opacity:0,translate:'0 12px'},{opacity:1,translate:'0 0'}],{duration:420,delay:60+index*55,fill:'backwards',easing:'cubic-bezier(.16,1,.3,1)'}));}
+}
