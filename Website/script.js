@@ -35,11 +35,27 @@ function renderGallery(platform){
 document.querySelectorAll('[data-gallery]').forEach(button=>button.addEventListener('click',()=>renderGallery(button.dataset.gallery)));
 renderGallery('windows');
 
-document.querySelectorAll('[data-appearance]').forEach(button=>button.addEventListener('click',()=>{
- const dark=button.dataset.appearance==='dark';
- const image=document.querySelector('#appearance-shot');
- image.src='assets/'+(dark?'windows-dashboard-dark.png':'windows-dashboard.png');
- image.alt='Windows '+(dark?'深色':'浅色')+'主题实际运行截图';
+
+const appearanceImage=document.querySelector('#appearance-shot');
+const appearanceFrame=document.createElement('div');appearanceFrame.className='appearance-image-frame';appearanceImage.before(appearanceFrame);appearanceFrame.append(appearanceImage);
+const appearanceOverlay=appearanceImage.cloneNode();appearanceOverlay.removeAttribute('id');appearanceOverlay.setAttribute('aria-hidden','true');appearanceOverlay.alt='';appearanceOverlay.loading='eager';appearanceOverlay.className='appearance-image-overlay';appearanceFrame.append(appearanceOverlay);
+let appearanceRequest=0;
+document.querySelectorAll('[data-appearance]').forEach(button=>button.addEventListener('click',async()=>{
+ const request=++appearanceRequest;const dark=button.dataset.appearance==='dark';
+ const src='assets/'+(dark?'windows-dashboard-dark.png':'windows-dashboard.png');
+ const preload=new Image();preload.src=src;try{await preload.decode();}catch{return;}
+ if(request!==appearanceRequest)return;
+ appearanceOverlay.src=appearanceImage.src;appearanceOverlay.style.opacity='1';
+ appearanceImage.src=src;appearanceImage.alt='Windows '+(dark?'深色':'浅色')+'主题实际运行截图';
+ requestAnimationFrame(()=>requestAnimationFrame(()=>{if(request===appearanceRequest)appearanceOverlay.style.opacity='0';}));
+ document.querySelector('.appearance-preview').classList.toggle('is-dark',dark);
  document.querySelector('#appearance-caption').textContent=dark?'深色模式 · 沉静、柔和的夜间工作台':'浅色模式 · 清晰、轻盈的白色工作台';
  document.querySelectorAll('[data-appearance]').forEach(item=>item.setAttribute('aria-pressed',String(item===button)));
+}));
+const websiteColors={green:['森林绿','#30643b','#dce6d7','#f5f4ee'],clay:['暖陶色','#8d5032','#eadbce','#f8f3ed'],blue:['雾蓝','#365f89','#d7e3ed','#f2f5f8'],purple:['柔紫','#6b528b','#e5dcef','#f6f3f8'],rose:['玫瑰色','#8b485e','#eedce3','#f9f2f4']};
+document.querySelectorAll('[data-color]').forEach(button=>button.addEventListener('click',()=>{
+ const [name,accent,soft,paper]=websiteColors[button.dataset.color];
+ document.documentElement.style.setProperty('--accent',accent);document.documentElement.style.setProperty('--soft',soft);document.documentElement.style.setProperty('--paper',paper);
+ document.querySelectorAll('[data-color]').forEach(item=>item.setAttribute('aria-pressed',String(item===button)));
+ document.querySelector('#color-status').textContent='正在应用：'+name;
 }));

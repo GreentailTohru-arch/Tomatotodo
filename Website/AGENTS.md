@@ -8,3 +8,5 @@
 - Use one SVG icon system with a 24-unit canvas for website actions. Windows and Android must have recognizable platform marks; do not substitute font glyphs, emoji or generic empty rectangles. Keep fixed icon sizes, aligned baselines and at least 44px interactive targets.
 
 - Main Windows product screenshots and promotional covers use the actual light theme. Dark theme belongs in a dedicated appearance section alongside light/dark mode and theme-color explanations.
+
+- Feature phone screenshots show the full original image without cover cropping or negative bottom margins. Appearance swatches are interactive, show the currently applied website color, and never recolor real screenshots. Light/dark screenshot changes use a soft crossfade and honor reduced motion.
