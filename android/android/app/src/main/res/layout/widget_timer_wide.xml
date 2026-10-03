@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/widget_root" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:background="@drawable/widget_shape"
+    android:clipToOutline="true">
+    <ImageView android:id="@+id/widget_background" android:layout_width="match_parent"
+        android:layout_height="match_parent" android:scaleType="fitXY"
+        android:importantForAccessibility="no" />
+    <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent"
+        android:orientation="vertical" android:padding="16dp">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="24dp"
+            android:gravity="center_vertical">
+            <ImageView android:id="@+id/brand" android:layout_width="20dp"
+                android:layout_height="20dp" android:src="@drawable/ic_stat_tomatotodo"
+                android:tint="#386A31" android:importantForAccessibility="no" />
+            <TextView android:id="@+id/heading" android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:layout_marginStart="8dp"
+                android:text="专注" android:textSize="12sp" android:fontFamily="sans-serif"
+                android:includeFontPadding="false" android:maxLines="1"
+                android:ellipsize="end" android:textStyle="bold" />
+        </LinearLayout>
+        <LinearLayout android:layout_width="match_parent" android:layout_height="0dp"
+            android:layout_weight="1" android:orientation="horizontal"
+            android:gravity="center_vertical">
+            <LinearLayout android:id="@+id/time_column" android:layout_width="112dp" android:layout_height="match_parent"
+                android:orientation="vertical" android:gravity="center_vertical"
+                android:clipChildren="true">
+                <FrameLayout android:layout_width="match_parent" android:layout_height="0dp"
+                    android:layout_weight="1" android:clipChildren="true">
+                    <TextView android:id="@+id/time_static" android:layout_width="match_parent"
+                        android:layout_height="match_parent" android:gravity="center_vertical|start"
+                        android:singleLine="true" android:textSize="56sp" android:fontFamily="monospace"
+                        android:includeFontPadding="false" />
+                    <Chronometer android:id="@+id/time_live" android:layout_width="match_parent"
+                        android:layout_height="match_parent" android:gravity="center_vertical|start"
+                        android:singleLine="true" android:textSize="56sp" android:fontFamily="monospace"
+                        android:includeFontPadding="false" android:visibility="gone" />
+                </FrameLayout>
+                <FrameLayout android:id="@+id/seconds_window" android:layout_width="64dp" android:layout_height="0dp"
+                    android:layout_weight="1" android:clipChildren="true">
+                    <TextView android:id="@+id/time_seconds_static" android:layout_width="match_parent"
+                        android:layout_height="match_parent" android:gravity="center_vertical|start"
+                        android:singleLine="true" android:textSize="56sp" android:fontFamily="monospace"
+                        android:includeFontPadding="false" />
+                    <Chronometer android:id="@+id/time_seconds_live" android:layout_width="300dp" android:layout_gravity="end"
+                        android:layout_height="match_parent" android:gravity="center_vertical|end"
+                        
+                        android:singleLine="true" android:textSize="56sp" android:fontFamily="monospace"
+                        android:includeFontPadding="false" android:visibility="gone" />
+                </FrameLayout>
+            </LinearLayout>
+            <LinearLayout android:layout_width="0dp" android:layout_weight="1"
+                android:layout_height="match_parent" android:orientation="vertical"
+                android:gravity="center_vertical" android:layout_marginStart="12dp">
+                <TextView android:id="@+id/list_name" android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:textSize="12sp"
+                    android:fontFamily="sans-serif" android:includeFontPadding="false"
+                    android:maxLines="1" android:ellipsize="end" />
+                <TextView android:id="@+id/task_name" android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:layout_marginTop="3dp"
+                    android:textSize="15sp" android:fontFamily="sans-serif"
+                    android:includeFontPadding="false" android:textStyle="bold"
+                    android:maxLines="2" android:ellipsize="end" />
+                <TextView android:id="@+id/task_subtitle" android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:layout_marginTop="2dp"
+                    android:textSize="11sp" android:fontFamily="sans-serif"
+                    android:includeFontPadding="false" android:maxLines="2"
+                    android:ellipsize="end" />
+                <TextView android:id="@+id/timer_detail" android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:layout_marginTop="4dp"
+                    android:textSize="12sp" android:fontFamily="sans-serif"
+                    android:includeFontPadding="false" android:maxLines="1" />
+                <ImageView android:id="@+id/action" android:layout_width="108dp"
+                    android:layout_height="48dp" android:layout_marginTop="8dp"
+                    android:scaleType="fitCenter" android:contentDescription="开始计时" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</FrameLayout>

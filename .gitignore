@@ -1,0 +1,21 @@
+# Generated artifacts and local configuration
+**/bin/
+**/obj/
+**/build/
+**/.dart_tool/
+**/.gradle/
+**/.vs/
+**/.idea/
+**/.codex-qa/
+**/releases/
+**/local.properties
+**/key.properties
+**/.env
+**/.env.*
+*.apk
+*.aab
+*.pfx
+*.p12
+*.jks
+*.keystore
+*.log

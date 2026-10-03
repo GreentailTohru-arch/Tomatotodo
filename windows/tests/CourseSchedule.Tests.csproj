@@ -1,0 +1,24 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net10.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="..\Data\TimerCycle.cs" Link="TimerCycle.cs" />
+    <Compile Include="..\Data\WindowEdgeSnap.cs" Link="WindowEdgeSnap.cs" />
+    <Compile Remove="AccountTests.cs;AboutTests.cs;LanguageTests.cs" />
+    <Compile Include="../Data/UiText.cs" />
+    <EmbeddedResource Include="../Localization/catalog.json" LogicalName="Tomatotodo.Localization.Catalog" />
+    <Compile Include="..\Data\CourseSchedule.cs" Link="CourseSchedule.cs" />
+    <Compile Include="..\Data\CourseReminder.cs" Link="CourseReminder.cs" />
+    <Compile Include="..\Data\OfflineQuotes.cs" Link="OfflineQuotes.cs" />
+    <Compile Include="..\Services\DashboardContentService.cs" Link="DashboardContentService.cs" />
+    <Compile Include="..\Services\AppUpdateService.cs" Link="AppUpdateService.cs" />
+    <Compile Include="..\Data\DashboardLayout.cs" Link="DashboardLayout.cs" />
+    <Compile Include="..\Data\AppState.cs" Link="AppState.cs" />
+    <Compile Include="..\Data\PresetSchedule.cs" Link="PresetSchedule.cs" />
+    <Compile Include="..\Data\ArchiveAnalytics.cs" Link="ArchiveAnalytics.cs" />
+  </ItemGroup>
+</Project>

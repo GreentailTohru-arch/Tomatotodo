@@ -1,0 +1,13 @@
+**/bin/
+**/obj/
+.vs/
+*.user
+*.suo
+AppPackages/
+output-final/
+packaging/setup-*-stage/
+packaging/*.zip
+tools/InnoSetup/
+packaging/publish-*/
+packaging/output*/
+packaging/innosetup-*.exe

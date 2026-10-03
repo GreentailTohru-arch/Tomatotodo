@@ -1,0 +1,248 @@
+{
+  "ar": {
+    "entries": 1233,
+    "missing": 0,
+    "placeholderErrors": 0,
+    "linguisticReview": "required"
+  },
+  "bn": {
+    "entries": 1233,
+    "missing": 0,
+    "placeholderErrors": 0,
+    "linguisticReview": "required"
+  },
+  "bg": {
+    "entries": 1233,
+    "missing": 0,
+    "placeholderErrors": 0,
+    "linguisticReview": "required"
+  },
+  "ca": {
+    "entries": 1233,
+    "missing": 0,
+    "placeholderErrors": 0,
+    "linguisticReview": "required"
+  },
+  "zh-CN": {
+    "entries": 1233,
+    "missing": 0,
+    "placeholderErrors": 0,
+    "linguisticReview": "source"
+  },
+  "zh-TW": {
+    "entries": 1233,
+    "missing": 0,
+    "placeholderErrors": 0,
+    "linguisticReview": "required"
+  },
+  "hr": {
+    "entries": 1233,
+    "missing": 0,
+    "placeholderErrors": 0,
+    "linguisticReview": "required"
+  },
+  "cs": {
+    "entries": 1233,
+    "missing": 0,
+    "placeholderErrors": 0,
+    "linguisticReview": "required"
+  },
+  "da": {
+    "entries": 1233,
+    "missing": 0,
+    "placeholderErrors": 0,
+    "linguisticReview": "required"
+  },
+  "nl": {
+    "entries": 1233,
+    "missing": 0,
+    "placeholderErrors": 0,
+    "linguisticReview": "required"
+  },
+  "en-US": {
+    "entries": 1233,
+    "missing": 0,
+    "placeholderErrors": 0,
+    "linguisticReview": "required"
+  },
+  "en-GB": {
+    "entries": 1233,
+    "missing": 0,
+    "placeholderErrors": 0,
+    "linguisticReview": "required"
+  },
+  "fil": {
+    "entries": 1233,
+    "missing": 0,
+    "placeholderErrors": 0,
+    "linguisticReview": "required"
+  },
+  "fi": {
+    "entries": 1233,
+    "missing": 0,
+    "placeholderErrors": 0,
+    "linguisticReview": "required"
+  },
+  "fr": {
+    "entries": 1233,
+    "missing": 0,
+    "placeholderErrors": 0,
+    "linguisticReview": "required"
+  },
+  "de": {
+    "entries": 1233,
+    "missing": 0,
+    "placeholderErrors": 0,
+    "linguisticReview": "required"
+  },
+  "el": {
+    "entries": 1233,
+    "missing": 0,
+    "placeholderErrors": 0,
+    "linguisticReview": "required"
+  },
+  "he": {
+    "entries": 1233,
+    "missing": 0,
+    "placeholderErrors": 0,
+    "linguisticReview": "required"
+  },
+  "hi": {
+    "entries": 1233,
+    "missing": 0,
+    "placeholderErrors": 0,
+    "linguisticReview": "required"
+  },
+  "hu": {
+    "entries": 1233,
+    "missing": 0,
+    "placeholderErrors": 0,
+    "linguisticReview": "required"
+  },
+  "id": {
+    "entries": 1233,
+    "missing": 0,
+    "placeholderErrors": 0,
+    "linguisticReview": "required"
+  },
+  "it": {
+    "entries": 1233,
+    "missing": 0,
+    "placeholderErrors": 0,
+    "linguisticReview": "required"
+  },
+  "ja": {
+    "entries": 1233,
+    "missing": 0,
+    "placeholderErrors": 0,
+    "linguisticReview": "required"
+  },
+  "ko": {
+    "entries": 1233,
+    "missing": 0,
+    "placeholderErrors": 0,
+    "linguisticReview": "required"
+  },
+  "ms": {
+    "entries": 1233,
+    "missing": 0,
+    "placeholderErrors": 0,
+    "linguisticReview": "required"
+  },
+  "nb": {
+    "entries": 1233,
+    "missing": 0,
+    "placeholderErrors": 0,
+    "linguisticReview": "required"
+  },
+  "pl": {
+    "entries": 1233,
+    "missing": 0,
+    "placeholderErrors": 0,
+    "linguisticReview": "required"
+  },
+  "pt-BR": {
+    "entries": 1233,
+    "missing": 0,
+    "placeholderErrors": 0,
+    "linguisticReview": "required"
+  },
+  "pt-PT": {
+    "entries": 1233,
+    "missing": 0,
+    "placeholderErrors": 0,
+    "linguisticReview": "required"
+  },
+  "ro": {
+    "entries": 1233,
+    "missing": 0,
+    "placeholderErrors": 0,
+    "linguisticReview": "required"
+  },
+  "ru": {
+    "entries": 1233,
+    "missing": 0,
+    "placeholderErrors": 0,
+    "linguisticReview": "required"
+  },
+  "sr-Cyrl": {
+    "entries": 1233,
+    "missing": 0,
+    "placeholderErrors": 0,
+    "linguisticReview": "required"
+  },
+  "sr-Latn": {
+    "entries": 1233,
+    "missing": 0,
+    "placeholderErrors": 0,
+    "linguisticReview": "required"
+  },
+  "sk": {
+    "entries": 1233,
+    "missing": 0,
+    "placeholderErrors": 0,
+    "linguisticReview": "required"
+  },
+  "es-ES": {
+    "entries": 1233,
+    "missing": 0,
+    "placeholderErrors": 0,
+    "linguisticReview": "required"
+  },
+  "es-419": {
+    "entries": 1233,
+    "missing": 0,
+    "placeholderErrors": 0,
+    "linguisticReview": "required"
+  },
+  "sv": {
+    "entries": 1233,
+    "missing": 0,
+    "placeholderErrors": 0,
+    "linguisticReview": "required"
+  },
+  "th": {
+    "entries": 1233,
+    "missing": 0,
+    "placeholderErrors": 0,
+    "linguisticReview": "required"
+  },
+  "tr": {
+    "entries": 1233,
+    "missing": 0,
+    "placeholderErrors": 0,
+    "linguisticReview": "required"
+  },
+  "uk": {
+    "entries": 1233,
+    "missing": 0,
+    "placeholderErrors": 0,
+    "linguisticReview": "required"
+  },
+  "vi": {
+    "entries": 1233,
+    "missing": 0,
+    "placeholderErrors": 0,
+    "linguisticReview": "required"
+  }
+}

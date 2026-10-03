@@ -1,0 +1,7 @@
+<appwidget-provider xmlns:android="http://schemas.android.com/apk/res/android"
+ android:minWidth="110dp" android:minHeight="50dp"
+ android:targetCellWidth="2" android:targetCellHeight="1"
+ android:minResizeWidth="110dp" android:minResizeHeight="50dp"
+ android:resizeMode="horizontal|vertical" android:updatePeriodMillis="1800000"
+ android:initialLayout="@layout/widget_countdown_short" android:previewLayout="@layout/widget_countdown_short"
+ android:widgetCategory="home_screen" android:widgetFeatures="reconfigurable"/>

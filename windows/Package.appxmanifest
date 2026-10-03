@@ -1,0 +1,110 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<Package
+  xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10"
+  xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest"
+  xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10"
+  xmlns:uap7="http://schemas.microsoft.com/appx/manifest/uap/windows10/7"
+  xmlns:desktop="http://schemas.microsoft.com/appx/manifest/desktop/windows10"
+  xmlns:com="http://schemas.microsoft.com/appx/manifest/com/windows10"
+  xmlns:rescap="http://schemas.microsoft.com/appx/manifest/foundation/windows10/restrictedcapabilities"
+  xmlns:systemai="http://schemas.microsoft.com/appx/manifest/systemai/windows10"
+  IgnorableNamespaces="uap uap7 desktop com rescap systemai">
+
+  <Identity
+    Name="2E92E1FE-6509-4265-A379-2A1D489DA01F"
+    Publisher="CN=Tomatotodo"
+    Version="1.6.2.0" />
+
+  <mp:PhoneIdentity PhoneProductId="2E92E1FE-6509-4265-A379-2A1D489DA01F" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
+
+  <Properties>
+    <DisplayName>Tomatotodo</DisplayName>
+    <PublisherDisplayName>Tomatotodo</PublisherDisplayName>
+    <Logo>Assets\StoreLogo.png</Logo>
+  </Properties>
+
+  <Dependencies>
+    <TargetDeviceFamily Name="Windows.Universal" MinVersion="10.0.17763.0" MaxVersionTested="10.0.26226.0" />
+    <TargetDeviceFamily Name="Windows.Desktop" MinVersion="10.0.17763.0" MaxVersionTested="10.0.26226.0" />
+  </Dependencies>
+
+  <Resources>
+    <Resource Language="ar" />
+    <Resource Language="bn" />
+    <Resource Language="bg" />
+    <Resource Language="ca" />
+    <Resource Language="zh-CN" />
+    <Resource Language="zh-TW" />
+    <Resource Language="hr" />
+    <Resource Language="cs" />
+    <Resource Language="da" />
+    <Resource Language="nl" />
+    <Resource Language="en-US" />
+    <Resource Language="en-GB" />
+    <Resource Language="fil" />
+    <Resource Language="fi" />
+    <Resource Language="fr" />
+    <Resource Language="de" />
+    <Resource Language="el" />
+    <Resource Language="he" />
+    <Resource Language="hi" />
+    <Resource Language="hu" />
+    <Resource Language="id" />
+    <Resource Language="it" />
+    <Resource Language="ja" />
+    <Resource Language="ko" />
+    <Resource Language="ms" />
+    <Resource Language="nb" />
+    <Resource Language="pl" />
+    <Resource Language="pt-BR" />
+    <Resource Language="pt-PT" />
+    <Resource Language="ro" />
+    <Resource Language="ru" />
+    <Resource Language="sr-Cyrl" />
+    <Resource Language="sr-Latn" />
+    <Resource Language="sk" />
+    <Resource Language="es-ES" />
+    <Resource Language="es-419" />
+    <Resource Language="sv" />
+    <Resource Language="th" />
+    <Resource Language="tr" />
+    <Resource Language="uk" />
+    <Resource Language="vi" />
+  </Resources>
+
+  <Applications>
+    <Application Id="App"
+      Executable="$targetnametoken$.exe"
+      EntryPoint="$targetentrypoint$">
+      <uap:VisualElements
+        DisplayName="Tomatotodo"
+        Description="Tomatotodo"
+        BackgroundColor="transparent"
+        Square150x150Logo="Assets\Square150x150Logo.png"
+        Square44x44Logo="Assets\Square44x44Logo.png">
+        <uap:DefaultTile Wide310x150Logo="Assets\Wide310x150Logo.png" />
+        <uap:SplashScreen Image="Assets\SplashScreen.png" />
+      </uap:VisualElements>
+      <Extensions>
+        <desktop:Extension Category="windows.toastNotificationActivation">
+          <desktop:ToastNotificationActivation ToastActivatorCLSID="C9623F7D-D6B0-497F-9E60-F369B75C28BA" />
+        </desktop:Extension>
+        <com:Extension Category="windows.comServer">
+          <com:ComServer>
+            <com:ExeServer Executable="Tomatotodo.Windows.exe" DisplayName="Tomatotodo" Arguments="----AppNotificationActivated:">
+              <com:Class Id="C9623F7D-D6B0-497F-9E60-F369B75C28BA" />
+            </com:ExeServer>
+          </com:ComServer>
+        </com:Extension>
+      </Extensions>
+    </Application>
+  </Applications>
+
+  <Capabilities>
+    <rescap:Capability Name="runFullTrust" />
+    <uap7:Capability Name="globalMediaControl" />
+    <systemai:Capability Name="systemAIModels"/>
+    <DeviceCapability Name="location" />
+  </Capabilities>
+</Package>

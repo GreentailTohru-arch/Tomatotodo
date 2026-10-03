@@ -1,0 +1,319 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Page
+    x:Class="Tomatotodo_Windows.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    SizeChanged="MainPage_SizeChanged">
+    <Page.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.ThemeDictionaries>
+                <ResourceDictionary x:Key="Default" />
+                <ResourceDictionary x:Key="Light" />
+                <ResourceDictionary x:Key="HighContrast" />
+            </ResourceDictionary.ThemeDictionaries>
+        </ResourceDictionary>
+    </Page.Resources>
+    <Viewbox Stretch="Uniform" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+    <Grid x:Name="ScaledShell">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="48" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <!-- Resolve code-built tile brushes in this page's RequestedTheme, not the
+             application's system theme. This palette is never rendered. -->
+        <Grid x:Name="DashboardThemePalette" Visibility="Collapsed" IsHitTestVisible="False">
+            <Border Tag="TextFillColorPrimaryBrush" Background="{ThemeResource TextFillColorPrimaryBrush}" />
+            <Border Tag="TextFillColorSecondaryBrush" Background="{ThemeResource TextFillColorSecondaryBrush}" />
+            <Border Tag="TextFillColorDisabledBrush" Background="{ThemeResource TextFillColorDisabledBrush}" />
+            <Border Tag="TextOnAccentFillColorPrimaryBrush" Background="{ThemeResource TextOnAccentFillColorPrimaryBrush}" />
+            <Border Tag="AccentFillColorDefaultBrush" Background="{ThemeResource AccentFillColorDefaultBrush}" />
+            <Border Tag="CardBackgroundFillColorDefaultBrush" Background="{ThemeResource CardBackgroundFillColorDefaultBrush}" />
+            <Border Tag="CardStrokeColorDefaultBrush" Background="{ThemeResource CardStrokeColorDefaultBrush}" />
+            <Border Tag="ControlStrongStrokeColorDefaultBrush" Background="{ThemeResource ControlStrongStrokeColorDefaultBrush}" />
+            <Border Tag="SubtleFillColorSecondaryBrush" Background="{ThemeResource SubtleFillColorSecondaryBrush}" />
+            <Border Tag="SubtleFillColorTransparentBrush" Background="{ThemeResource SubtleFillColorTransparentBrush}" />
+        </Grid>
+        <Grid x:Name="ShellCommandBar" FlowDirection="LeftToRight" Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Padding="8,0,14,0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition x:Name="ShellBackColumn" Width="0" />
+                <ColumnDefinition Width="40" />
+                <ColumnDefinition x:Name="ShellIconColumn" Width="30" />
+                <ColumnDefinition Width="132" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition x:Name="ShellCaptionColumn" Width="160" />
+            </Grid.ColumnDefinitions>
+            <Button x:Name="ShellBackButton" Grid.Column="0" Width="36" Height="36" Visibility="Collapsed" Style="{StaticResource ShellIconButtonStyle}"
+                    Click="ShellBackButton_Click" ToolTipService.ToolTip="返回" AutomationProperties.Name="返回">
+                <FontIcon x:Name="ShellBackGlyph" FontFamily="{StaticResource SymbolThemeFontFamily}" Glyph="&#xE72B;" FontSize="16"/>
+            </Button>
+            <Button x:Name="ShellPaneButton" Grid.Column="1" Width="36" Height="36" Style="{StaticResource ShellIconButtonStyle}"
+                    Click="ShellPaneButton_Click" ToolTipService.ToolTip="展开或收起导航" AutomationProperties.Name="展开或收起导航">
+                <FontIcon FontFamily="{StaticResource SymbolThemeFontFamily}" Glyph="&#xE700;" FontSize="16"/>
+            </Button>
+            <Image x:Name="ShellAppIcon" Grid.Column="2" Width="22" Height="22" VerticalAlignment="Center"
+                   Source="ms-appx:///Assets/Square44x44Logo.scale-200.png" />
+            <TextBlock x:Name="ShellAppTitle" Grid.Column="3" Text="Tomatotodo" Margin="8,0,0,0"
+                       VerticalAlignment="Center" TextTrimming="CharacterEllipsis" FontSize="14" FontWeight="SemiBold" />
+            <Grid x:Name="ShellSearchHost" Grid.Column="4" MaxWidth="516" Height="32"
+                  Margin="18,0,10,0" HorizontalAlignment="Stretch" VerticalAlignment="Center">
+                <AutoSuggestBox x:Name="ShellSearchBox"
+                                HorizontalAlignment="Stretch" VerticalAlignment="Center"
+                                QueryIcon="Find"
+                                PlaceholderText="搜索 Tomatotodo" TextChanged="ShellSearchBox_TextChanged"
+                                SuggestionChosen="ShellSearchBox_SuggestionChosen" QuerySubmitted="ShellSearchBox_QuerySubmitted"
+                                LostFocus="ShellSearchBox_LostFocus" />
+            </Grid>
+            <Button x:Name="ShellSearchButton" Grid.Column="4" Width="36" Height="36" HorizontalAlignment="Left"
+                    Visibility="Collapsed" Style="{StaticResource ShellIconButtonStyle}" Click="ShellSearchButton_Click" ToolTipService.ToolTip="搜索" AutomationProperties.Name="搜索">
+                <FontIcon FontFamily="{StaticResource SymbolThemeFontFamily}" Glyph="&#xE721;" FontSize="16"/>
+            </Button>
+        </Grid>
+        <NavigationView x:Name="Navigation" Grid.Row="1" PaneDisplayMode="Left" IsBackButtonVisible="Collapsed"
+                        IsPaneToggleButtonVisible="False" IsSettingsVisible="False" OpenPaneLength="226" CompactPaneLength="52"
+                        Loaded="Navigation_Loaded" SelectionChanged="Navigation_SelectionChanged" ItemInvoked="Navigation_ItemInvoked">
+        <NavigationView.MenuItems>
+            <NavigationViewItem x:Name="LocalizedElement0" Content="仪表盘" Tag="dashboard">
+                <NavigationViewItem.Icon><FontIcon FontFamily="{StaticResource SymbolThemeFontFamily}" Glyph="&#xF246;" FontSize="20"/></NavigationViewItem.Icon>
+            </NavigationViewItem>
+            <NavigationViewItem x:Name="LocalizedElement1" Content="配置" Tag="presets">
+                <NavigationViewItem.Icon><FontIcon FontFamily="{StaticResource SymbolThemeFontFamily}" Glyph="&#xE9D5;" FontSize="20"/></NavigationViewItem.Icon>
+            </NavigationViewItem>
+            <NavigationViewItem x:Name="LocalizedElement2" Content="档案" Tag="archive">
+                <NavigationViewItem.Icon><FontIcon FontFamily="{StaticResource SymbolThemeFontFamily}" Glyph="&#xE9D2;" FontSize="20"/></NavigationViewItem.Icon>
+            </NavigationViewItem>
+            <NavigationViewItem x:Name="CourseNavigationItem" Content="课程表" Tag="courses" Visibility="Collapsed">
+                <NavigationViewItem.Icon><FontIcon FontFamily="{StaticResource SymbolThemeFontFamily}" Glyph="&#xE787;" FontSize="20"/></NavigationViewItem.Icon>
+            </NavigationViewItem>
+            <NavigationViewItem x:Name="LocalizedElement3" Content="工具" Tag="tools">
+                <NavigationViewItem.Icon><FontIcon FontFamily="{StaticResource SymbolThemeFontFamily}" Glyph="&#xE90F;" FontSize="20"/></NavigationViewItem.Icon>
+            </NavigationViewItem>
+        </NavigationView.MenuItems>
+        <NavigationView.FooterMenuItems>
+            <NavigationViewItem x:Name="AccountEntryButton" Tag="account" SelectsOnInvoked="False"
+                    ToolTipService.ToolTip="账户与个人资料" AutomationProperties.Name="账户与个人资料">
+                <NavigationViewItem.Resources>
+                    <x:Double x:Key="NavigationViewItemOnLeftIconBoxHeight">16</x:Double>
+                </NavigationViewItem.Resources>
+                <NavigationViewItem.Icon>
+                    <FontIcon Glyph="&#xE77B;" FontFamily="{StaticResource SymbolThemeFontFamily}" FontSize="20"/>
+                </NavigationViewItem.Icon>
+                    <TextBlock x:Name="AccountEntryName" Text="未登录" MaxWidth="144" TextTrimming="CharacterEllipsis" VerticalAlignment="Center"/>
+            </NavigationViewItem>
+            <NavigationViewItem x:Name="LocalizedElement4" Content="常规" Tag="general">
+                <NavigationViewItem.Icon><FontIcon x:Name="ShellSettingsGlyph" FontFamily="{StaticResource SymbolThemeFontFamily}" Glyph="&#xE713;" FontSize="20"/></NavigationViewItem.Icon>
+            </NavigationViewItem>
+        </NavigationView.FooterMenuItems>
+        <Grid>
+        <Grid x:Name="PresetDrawerWorkspace" SizeChanged="PresetDrawerWorkspace_SizeChanged">
+        <Grid Padding="24,12,24,0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Border BorderThickness="0,0,0,1" BorderBrush="{ThemeResource CardStrokeColorDefaultBrush}" Margin="0,0,0,16" Padding="0,0,0,12">
+                <Grid x:Name="WorkspaceHeader">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="Auto" />
+                    </Grid.ColumnDefinitions>
+                    <Grid VerticalAlignment="Center">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+                        <StackPanel x:Name="SettingsParentHeader" Orientation="Horizontal" Spacing="12"
+                                    Margin="0,0,12,0" VerticalAlignment="Top" Visibility="Collapsed">
+                            <Button x:Name="LocalizedElement5" Click="SettingsParentButton_Click" Padding="0" BorderThickness="0"
+                                    Background="Transparent" FontSize="29" FontWeight="SemiBold"
+                                    Foreground="{ThemeResource TextFillColorSecondaryBrush}"
+                                    ToolTipService.ToolTip="返回常规" AutomationProperties.Name="返回常规">
+                                <TextBlock x:Name="LocalizedElement6" Text="常规" FontSize="29" FontWeight="SemiBold" />
+                            </Button>
+                            <FontIcon Glyph="&#xE76C;" FontSize="20" VerticalAlignment="Center"
+                                      Foreground="{ThemeResource TextFillColorSecondaryBrush}" />
+                        </StackPanel>
+                        <TextBlock x:Name="PageTitle" Grid.Column="1" FontSize="29" FontWeight="SemiBold"
+                                   VerticalAlignment="Center" TextWrapping="Wrap"
+                                   Foreground="{ThemeResource TextFillColorPrimaryBrush}" />
+                    </Grid>
+                    <StackPanel x:Name="DashboardToolbar" Grid.Column="1" Orientation="Horizontal" Spacing="8" Visibility="Collapsed">
+                        <Button x:Name="DashboardEditButton" Width="40" Height="40" Style="{StaticResource ShellIconButtonStyle}"
+                                Click="DashboardEditButton_Click" ToolTipService.ToolTip="编辑仪表盘" AutomationProperties.Name="编辑仪表盘">
+                            <SymbolIcon Symbol="Edit" />
+                        </Button>
+                        <Button x:Name="DashboardAddButton" Width="40" Height="40" Style="{StaticResource ShellIconButtonStyle}"
+                                Visibility="Collapsed" Click="DashboardAddButton_Click" ToolTipService.ToolTip="添加组件" AutomationProperties.Name="添加组件">
+                            <SymbolIcon Symbol="Add" />
+                        </Button>
+                        <Button x:Name="DashboardSaveButton" Height="40" Padding="16,0" Style="{StaticResource TomatotodoAccentButtonStyle}"
+                                Visibility="Collapsed" Click="DashboardSaveButton_Click" ToolTipService.ToolTip="保存布局">
+                            <StackPanel Orientation="Horizontal" Spacing="8">
+                                <SymbolIcon Symbol="Save" /><TextBlock x:Name="LocalizedElement7" Text="保存布局" VerticalAlignment="Center" />
+                            </StackPanel>
+                        </Button>
+                    </StackPanel>
+                    <StackPanel x:Name="PresetToolbar" Grid.Column="1" Orientation="Horizontal" Spacing="8" Visibility="Collapsed">
+                        <Button x:Name="LocalizedElement8" Width="40" Height="40" Style="{StaticResource ShellIconButtonStyle}"
+                                Click="PresetHistory_Click" ToolTipService.ToolTip="历史任务" AutomationProperties.Name="历史任务">
+                            <FontIcon FontFamily="{StaticResource SymbolThemeFontFamily}" Glyph="&#xE81C;" FontSize="20"/>
+                        </Button>
+                        <Button x:Name="LocalizedElement9" Width="40" Height="40" Style="{StaticResource ShellIconButtonStyle}"
+                                Click="PresetSort_Click" ToolTipService.ToolTip="配置排序" AutomationProperties.Name="配置排序">
+                            <FontIcon FontFamily="{StaticResource SymbolThemeFontFamily}" Glyph="&#xE8CB;" FontSize="20"/>
+                        </Button>
+                    </StackPanel>
+                    <StackPanel x:Name="ArchiveToolbar" Grid.Column="1" Orientation="Horizontal" Spacing="8" Visibility="Collapsed">
+                        <Button x:Name="ArchiveExportButton" Width="42" Height="42" Style="{StaticResource ShellIconButtonStyle}"
+                                Click="ArchiveExport_Click" ToolTipService.ToolTip="保存专注明信片为 PNG" AutomationProperties.Name="保存专注明信片为 PNG">
+                            <FontIcon FontFamily="{StaticResource SymbolThemeFontFamily}" Glyph="&#xE74E;" FontSize="20"/>
+                        </Button>
+                    </StackPanel>
+                    <StackPanel x:Name="CourseToolbar" Grid.Column="1" Orientation="Horizontal" Spacing="10"
+                                VerticalAlignment="Center" Visibility="Collapsed">
+                        <AutoSuggestBox x:Name="CourseSearchBox" Width="238" Height="32"
+                                        VerticalAlignment="Center" PlaceholderText="搜索课程、教室或教师"
+                                        TextChanged="CourseSearchBox_TextChanged" SuggestionChosen="CourseSearchBox_SuggestionChosen"
+                                        QuerySubmitted="CourseSearchBox_QuerySubmitted" />
+                        <TextBlock x:Name="LocalizedElement10" Text="当前周次" VerticalAlignment="Center" Opacity="0.7" FontSize="12" />
+                        <ComboBox x:Name="CourseWeekComboBox" Width="132" Height="32" VerticalAlignment="Center"
+                                  SelectionChanged="CourseWeekComboBox_SelectionChanged" />
+                    </StackPanel>
+                </Grid>
+            </Border>
+            <ScrollViewer x:Name="PageScroll" Grid.Row="1" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled">
+                <Grid x:Name="PageContentHost" HorizontalAlignment="Stretch">
+                    <StackPanel x:Name="PageBody" Spacing="12" HorizontalAlignment="Stretch">
+                        <StackPanel.ChildrenTransitions>
+                            <TransitionCollection>
+                                <EntranceThemeTransition FromVerticalOffset="18" />
+                            </TransitionCollection>
+                        </StackPanel.ChildrenTransitions>
+                    </StackPanel>
+                </Grid>
+            </ScrollViewer>
+            <StackPanel x:Name="DashboardFooter" Grid.Row="1" Orientation="Horizontal" Spacing="8"
+                        Background="{x:Null}" Margin="0,0,0,20"
+                        HorizontalAlignment="Right" VerticalAlignment="Bottom" Visibility="Collapsed">
+                <Button x:Name="DashboardStartButton" MinWidth="172" Height="48" Padding="16,0"
+                        Style="{StaticResource TomatotodoAccentButtonStyle}" Click="DashboardStartButton_Click">
+                    <StackPanel Orientation="Horizontal" Spacing="12">
+                        <SymbolIcon x:Name="DashboardStartIcon" Symbol="Play" />
+                        <TextBlock x:Name="DashboardStartLabel" Text="开始专注" FontWeight="SemiBold" VerticalAlignment="Center" />
+                        <TextBlock x:Name="DashboardFooterTime" FontSize="12" VerticalAlignment="Center" />
+                    </StackPanel>
+                </Button>
+                <Button x:Name="DashboardResetButton" Width="48" Height="48" Padding="0" Click="DashboardResetButton_Click"
+                        Background="{ThemeResource SolidBackgroundFillColorTertiaryBrush}"
+                        ToolTipService.ToolTip="重置计时器" AutomationProperties.Name="重置计时器">
+                    <Button.Resources>
+                        <ResourceDictionary>
+                            <ResourceDictionary.ThemeDictionaries>
+                                <ResourceDictionary x:Key="Default">
+                                    <SolidColorBrush x:Key="ButtonBackgroundPointerOver" Color="#454545" />
+                                    <SolidColorBrush x:Key="ButtonBackgroundPressed" Color="#292929" />
+                                </ResourceDictionary>
+                                <ResourceDictionary x:Key="Light">
+                                    <SolidColorBrush x:Key="ButtonBackgroundPointerOver" Color="#E9E9E9" />
+                                    <SolidColorBrush x:Key="ButtonBackgroundPressed" Color="#DDDDDD" />
+                                </ResourceDictionary>
+                            </ResourceDictionary.ThemeDictionaries>
+                        </ResourceDictionary>
+                    </Button.Resources>
+                    <SymbolIcon Symbol="Refresh" />
+                </Button>
+            </StackPanel>
+            <Button x:Name="PresetAddButton" Grid.Row="1" Width="200" Height="48" Margin="0,0,0,20"
+                    HorizontalAlignment="Right" VerticalAlignment="Bottom" Visibility="Collapsed"
+                    Click="PresetAdd_Click" Style="{StaticResource TomatotodoAccentButtonStyle}">
+                <StackPanel Orientation="Horizontal" Spacing="8">
+                    <SymbolIcon Symbol="Add" />
+                    <TextBlock x:Name="LocalizedElement11" Text="添加预设" VerticalAlignment="Center" />
+                </StackPanel>
+            </Button>
+        </Grid>
+            <Grid x:Name="PresetDrawerLayer" Visibility="Collapsed">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="Auto" />
+                </Grid.ColumnDefinitions>
+                <Grid Grid.Column="0">
+                    <!-- This surface intentionally blocks input to the underlying page but has no
+                         button visual states and no light-dismiss behavior. -->
+                    <Border Background="{ThemeResource PresetDrawerAcrylicBrush}" />
+                </Grid>
+                <Border x:Name="PresetDrawerPanel" Grid.Column="1" Width="540"
+                        Padding="24,20,24,20" Background="{ThemeResource SolidBackgroundFillColorSecondaryBrush}">
+                    <Border.RenderTransform>
+                        <TranslateTransform x:Name="PresetDrawerTranslate" />
+                    </Border.RenderTransform>
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="Auto" />
+                        </Grid.RowDefinitions>
+                        <Grid>
+                            <Grid.ColumnDefinitions><ColumnDefinition Width="*"/><ColumnDefinition Width="Auto"/></Grid.ColumnDefinitions>
+                            <StackPanel Spacing="2">
+                                <TextBlock x:Name="PresetDrawerEyebrow" FontSize="12" Opacity="0.72" FontWeight="SemiBold" />
+                                <TextBlock x:Name="PresetDrawerTitle" FontSize="24" FontWeight="SemiBold" />
+                            </StackPanel>
+                            <Button x:Name="LocalizedElement12" Grid.Column="1" Width="40" Height="40" Style="{StaticResource ShellIconButtonStyle}"
+                                    Click="PresetDrawerClose_Click" ToolTipService.ToolTip="关闭">
+                                <SymbolIcon Symbol="Cancel" />
+                            </Button>
+                        </Grid>
+                        <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Auto" Margin="0,22,0,14">
+                            <StackPanel x:Name="PresetDrawerBody" Spacing="12" />
+                        </ScrollViewer>
+                        <StackPanel x:Name="PresetDrawerFooter" Grid.Row="2" Spacing="10" />
+                    </Grid>
+                </Border>
+            </Grid>
+            <Grid x:Name="DashboardDrawerLayer" Visibility="Collapsed">
+                <Border Background="{ThemeResource PresetDrawerAcrylicBrush}" />
+                <Border x:Name="DashboardDrawerPanel" HorizontalAlignment="Right" Width="420"
+                        Background="{ThemeResource SolidBackgroundFillColorSecondaryBrush}" Padding="24,20,24,20">
+                    <Border.RenderTransform><TranslateTransform x:Name="DashboardDrawerTranslate" /></Border.RenderTransform>
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="*" />
+                        </Grid.RowDefinitions>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="Auto" />
+                            </Grid.ColumnDefinitions>
+                            <StackPanel Spacing="4">
+                                <TextBlock x:Name="LocalizedElement13" Text="仪表盘" FontSize="12" Foreground="{ThemeResource TextFillColorSecondaryBrush}" />
+                                <TextBlock x:Name="LocalizedElement14" Text="添加组件" FontSize="24" FontWeight="SemiBold" />
+                            </StackPanel>
+                            <Button x:Name="LocalizedElement15" Grid.Column="1" Width="40" Height="40" Style="{StaticResource ShellIconButtonStyle}"
+                                    Click="DashboardDrawerCloseButton_Click" AutomationProperties.Name="关闭组件库" ToolTipService.ToolTip="关闭">
+                                <SymbolIcon Symbol="Cancel" />
+                            </Button>
+                        </Grid>
+                        <TextBlock x:Name="LocalizedElement16" Grid.Row="1" Text="选择组件加入仪表盘。长按磁贴可调整顺序，完成后点击“保存布局”。"
+                                   TextWrapping="Wrap" Margin="0,20,0,16" Foreground="{ThemeResource TextFillColorSecondaryBrush}" />
+                        <ScrollViewer Grid.Row="2" VerticalScrollBarVisibility="Auto">
+                            <StackPanel x:Name="DashboardDrawerItems" Spacing="10" />
+                        </ScrollViewer>
+                    </Grid>
+                </Border>
+            </Grid>
+            <Canvas x:Name="RenderCaptureHost" Width="0" Height="0" IsHitTestVisible="False" />
+        </Grid>
+        <InfoBar x:Name="AppMessage" IsOpen="False" IsClosable="False" Visibility="Collapsed"
+                 Width="620" MaxWidth="620" MinHeight="48" Margin="12,8,12,0"
+                 HorizontalAlignment="Center" VerticalAlignment="Top" Severity="Success"
+                 ManipulationMode="TranslateX" AutomationProperties.LiveSetting="Polite">
+            <InfoBar.RenderTransform><TranslateTransform x:Name="AppMessageTransform" /></InfoBar.RenderTransform>
+        </InfoBar>
+        </Grid>
+        </NavigationView>
+        <Grid x:Name="ImmersiveHost" Grid.RowSpan="2" Background="Black" Visibility="Collapsed" />
+    </Grid>
+    </Viewbox>
+</Page>

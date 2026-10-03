@@ -1,0 +1,7 @@
+{
+  "profiles": {
+    "Tomatotodo.Windows (Package)": {
+      "commandName": "MsixPackage"
+    }
+  }
+}

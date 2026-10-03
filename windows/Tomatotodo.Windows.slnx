@@ -1,0 +1,16 @@
+<Solution>
+  <Configurations>
+    <BuildType Name="Debug" />
+    <BuildType Name="Release" />
+    <Platform Name="x64" />
+  </Configurations>
+  <Project Path="Tomatotodo.Windows.csproj" DefaultStartup="true">
+    <Platform Solution="*|x64" Project="x64" />
+    <Deploy />
+  </Project>
+  <Folder Name="/tests/">
+    <Project Path="tests/CourseSchedule.Tests.csproj">
+      <Platform Solution="*|x64" Project="Any CPU" />
+    </Project>
+  </Folder>
+</Solution>

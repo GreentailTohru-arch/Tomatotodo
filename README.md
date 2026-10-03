@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="./icon-192.png" width="104" height="104" alt="Tomatotodo 图标" />
+  <img src="./icon.png" width="104" height="104" alt="Tomatotodo 图标" />
 </p>
 
 <h1 align="center">Tomatotodo</h1>
@@ -46,7 +46,7 @@ Tomatotodo 将计时、任务与专注记录放在同一个工作空间，适合
 
 APK 支持 arm64-v8a、armeabi-v7a 和 x86_64，大小约 **63.4 MiB**。1.0.3 沿用 1.0.2 的签名，可覆盖升级；当前安装包使用工程调试证书签署。详细校验值见对应 Release。
 
-> 请下载 Release 的安装程序或 APK 附件。GitHub 自动生成的 “Source code” 压缩包不代表对应 WinUI 或 Flutter 客户端的源码快照。
+> 普通用户请下载安装程序或 APK。当前客户端源码分别位于 [`windows/`](./windows/) 和 [`android/`](./android/)；历史 Release 标签仍指向当时的仓库内容，不会随本次源码上传改变。
 
 ## 主要功能
 
@@ -166,51 +166,69 @@ Android 桌面小组件包含专注计时、任务清单、今日课程、倒数
 
 ## 仓库与源码说明
 
-本仓库用于软件介绍、版本发布及现有资料展示。仓库中的 [`Tomatotodo/`](./Tomatotodo/) 目录保留 **React / Vite / WebView2 的早期 1.2.0 工程**，不能据此构建当前 Windows 1.6.2 或 Android 1.0.3。
+当前 Windows 和 Android 客户端的源码分别管理：
 
-### 早期工程本地开发
+| 目录 | 版本 | 技术栈 | 编译说明 |
+| --- | --- | --- | --- |
+| [`windows/`](./windows/) | 1.6.2 | C# / .NET 10 / WinUI 3 | [Windows 开发文档](./windows/README.md) |
+| [`android/`](./android/) | 1.0.3+9 | Flutter / Dart / Android Kotlin | [Android 开发文档](./android/README.md) |
+| [`Tomatotodo/`](./Tomatotodo/) | 早期 1.2.0 | React / Vite / WebView2 | [历史工程文档](./Tomatotodo/README.md) |
 
-以下命令仅适用于仓库内的早期 Web 工程：
+两个客户端包含各自的数据模型、同步客户端、界面和测试。云端服务端不包含在这两个目录中；云端功能需要可用的服务。仓库不包含本地账户数据、认证令牌、签名私钥、已编译安装包或 SDK 缓存。
 
-```bash
-git clone https://github.com/GreentailTohru-arch/Tomatotodo.git
-cd Tomatotodo/Tomatotodo
-pnpm install --frozen-lockfile
-pnpm dev
+### Windows 开发
+
+安装 .NET 10 SDK、Windows SDK 及 WinUI 开发工具后，在 Visual Studio 打开 `windows/Tomatotodo.Windows.slnx`。命令行构建：
+
+```powershell
+cd windows
+dotnet restore Tomatotodo.Windows.csproj
+dotnet build Tomatotodo.Windows.csproj -p:Platform=x64
 ```
 
-构建与检查：
+安装程序使用 Inno Setup 6 构建，具体参数见 Windows 开发文档。
+
+### Android 开发
+
+安装满足 `pubspec.yaml` 中 Dart SDK 约束的 Flutter SDK，以及 Android SDK / Java 17。Android Studio 打开 `android/` 目录：
 
 ```bash
-pnpm run build
-pnpm run test:sites
+cd android
+flutter pub get
+flutter analyze
+flutter test
+flutter build apk --release
+```
+
+源码保留 iOS 和 Web 平台脚手架；不代表已发布或完成验证的 iOS 产品。Android 当前 release 构建使用调试签名，正式分发应自行配置签名，私钥不得提交。
+
+### 历史 Web 工程
+
+```bash
+cd Tomatotodo
+pnpm install --frozen-lockfile
+pnpm dev
 pnpm run check
 ```
 
-早期 Windows WebView2 外壳打包：
+早期 WebView2 安装程序的构建命令：
 
 ```powershell
 pnpm run build
 powershell -ExecutionPolicy Bypass -File packaging/windows/build.ps1 -Setup
 ```
 
-以上打包方式生成的是早期 WebView2 应用，不是当前 WinUI 客户端。其快捷键包括 `F12` 全屏、`F5` 刷新天气；当前客户端操作请以应用界面为准。
+上述 Web 工程命令不用于当前 WinUI 或 Flutter 客户端。早期 1.2.0 引入组件化仪表盘、任务预设、专注档案、Material You 和工具窗口；历史材料仅反映对应版本。
 
 ### 目录结构
 
 ```text
-README.md                         软件介绍与下载入口
-icon-192.png                      应用图标
-Tomatotodo/                       早期 Web 工程
-  src/                            React 页面与组件
-  public/                         静态资源与应用图标
-  packaging/windows/              早期 WebView2 外壳打包
-  scripts/                        构建脚本
-  tests/                          自动化测试
-Tomatotodo-1.3.0-… .pdf            历史用户手册与代码材料
+README.md       软件介绍与下载入口
+icon.png        当前软件图标
+windows/        Windows 1.6.2 原生客户端源码
+android/        Android 1.0.3 Flutter 客户端源码
+Tomatotodo/     早期 Web / WebView2 工程
 ```
-
-早期 1.2.0 引入了组件化仪表盘、任务清单预设、专注档案、Material You 配色及工具窗口。历史材料反映对应版本，不作为当前客户端的完整使用说明。
 
 ## 反馈与参与
 
@@ -221,7 +239,7 @@ Tomatotodo-1.3.0-… .pdf            历史用户手册与代码材料
 - 截图或日志；请先遮挡账户、邮箱等个人信息。
 - 语言问题请注明所选语言，布局问题请注明设备尺寸与横竖屏状态。
 
-修改仓库内早期 Web 工程时，请在提交前运行 `pnpm run check`。代码的使用、修改和分发条件以明确的许可证为准；README 不替代许可证。
+修改 Android 工程请运行 `flutter analyze` 和 `flutter test`；Windows 请完成构建并运行相关测试项目；早期 Web 工程请运行 `pnpm run check`。代码的使用、修改和分发条件以明确的许可证为准；README 不替代许可证。
 
 ## 致谢
 

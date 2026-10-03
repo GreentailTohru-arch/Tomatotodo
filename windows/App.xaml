@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Application
+    x:Class="Tomatotodo_Windows.App"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Tomatotodo_Windows">
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <XamlControlsResources xmlns="using:Microsoft.UI.Xaml.Controls" />
+                <!-- Other merged dictionaries here -->
+            </ResourceDictionary.MergedDictionaries>
+            <ResourceDictionary.ThemeDictionaries>
+                <ResourceDictionary x:Key="Default">
+                    <AcrylicBrush x:Key="PresetDrawerAcrylicBrush"
+                                  TintColor="#202020"
+                                  TintOpacity="0.42"
+                                  TintLuminosityOpacity="0.40"
+                                  FallbackColor="#E6202020" />
+                </ResourceDictionary>
+                <ResourceDictionary x:Key="Light">
+                    <AcrylicBrush x:Key="PresetDrawerAcrylicBrush"
+                                  TintColor="#F3F3F3"
+                                  TintOpacity="0.42"
+                                  TintLuminosityOpacity="0.72"
+                                  FallbackColor="#E6F3F3F3" />
+                </ResourceDictionary>
+                <ResourceDictionary x:Key="HighContrast">
+                    <SolidColorBrush x:Key="PresetDrawerAcrylicBrush"
+                                     Color="{ThemeResource SystemColorWindowColor}" />
+                </ResourceDictionary>
+            </ResourceDictionary.ThemeDictionaries>
+            <Style x:Key="ShellIconButtonStyle" TargetType="Button">
+                <Setter Property="Background" Value="Transparent" />
+                <Setter Property="BorderBrush" Value="Transparent" />
+                <Setter Property="BorderThickness" Value="0" />
+                <Setter Property="CornerRadius" Value="4" />
+                <Setter Property="Padding" Value="0" />
+            </Style>
+            <SolidColorBrush x:Key="TomatotodoAccentButtonBrush" Color="#30643B" />
+            <SolidColorBrush x:Key="TomatotodoAccentButtonForegroundBrush" Color="White" />
+            <Style x:Key="TomatotodoAccentButtonStyle" TargetType="Button" BasedOn="{StaticResource AccentButtonStyle}">
+                <Setter Property="Background" Value="{StaticResource TomatotodoAccentButtonBrush}" />
+                <Setter Property="Foreground" Value="{StaticResource TomatotodoAccentButtonForegroundBrush}" />
+            </Style>
+            <!-- Other app resources here -->
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net10.0-windows10.0.26100.0</TargetFramework>
+    <TargetPlatformMinVersion>10.0.17763.0</TargetPlatformMinVersion>
+    <ImplicitUsings>enable</ImplicitUsings><Nullable>enable</Nullable>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="AccountTests.cs" />
+    <Compile Include="../Data/UiText.cs" />
+    <EmbeddedResource Include="../Localization/catalog.json" LogicalName="Tomatotodo.Localization.Catalog" />
+    <Compile Include="..\Accounts\*.cs" />
+    <Compile Include="..\Data\AppState.cs" />
+    <Compile Include="..\Data\CourseSchedule.cs" />
+    <Compile Include="..\Data\DashboardLayout.cs" />
+    <PackageReference Include="CommunityToolkit.Mvvm" Version="8.4.0" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,131 @@
+<Window x:Name="LocalizedElement0" x:Class="Tomatotodo_Windows.Views.AccountWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Tomatotodo_Windows.Views" Title="账户 · Tomatotodo">
+    <Grid x:Name="Root" Background="{ThemeResource SolidBackgroundFillColorBaseBrush}">
+        <Grid.RowDefinitions><RowDefinition Height="48"/><RowDefinition Height="*"/></Grid.RowDefinitions>
+        <Grid x:Name="DragRegion" Padding="20,0,140,0">
+            <StackPanel Orientation="Horizontal" Spacing="10" VerticalAlignment="Center">
+                <FontIcon Glyph="&#xE77B;" FontFamily="{StaticResource SymbolThemeFontFamily}" FontSize="16"/>
+                <TextBlock x:Name="LocalizedElement1" Text="账户 · Tomatotodo" FontSize="14" VerticalAlignment="Center"/>
+            </StackPanel>
+        </Grid>
+        <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled">
+            <StackPanel x:Name="Surface" Padding="24,16,24,24" Spacing="20">
+                <StackPanel Spacing="8">
+                    <TextBlock x:Name="LocalizedElement2" Text="你的账户" Style="{StaticResource TitleTextBlockStyle}"/>
+                    <TextBlock x:Name="LocalizedElement3" Text="在独立窗口中管理账户与资料。" TextWrapping="Wrap" Foreground="{ThemeResource TextFillColorSecondaryBrush}"/>
+                </StackPanel>
+                <ProgressBar IsIndeterminate="True" Visibility="{x:Bind Show(ViewModel.IsBusy), Mode=OneWay}"/>
+                <InfoBar x:Name="CapsLockWarning" IsOpen="True" IsClosable="False" Severity="Warning"
+                         Title="大写锁定已开启" Message="输入密码时请注意字母大小写。" Visibility="Collapsed"/>
+                <TextBlock Text="{x:Bind ViewModel.Status, Mode=OneWay}" TextWrapping="Wrap" AutomationProperties.LiveSetting="Polite"
+                           Visibility="{x:Bind Show(ViewModel.HasStatus), Mode=OneWay}"
+                           Foreground="{ThemeResource AccentTextFillColorPrimaryBrush}"/>
+                <ContentControl IsEnabled="{x:Bind ViewModel.IsReady, Mode=OneWay}" HorizontalContentAlignment="Stretch"
+                                Visibility="{x:Bind Show(ViewModel.IsSignedOut), Mode=OneWay}">
+                <StackPanel Spacing="16">
+                    <Pivot SelectedIndex="{x:Bind ViewModel.SelectedMode, Mode=TwoWay}" Margin="-12,0,0,0">
+                        <PivotItem x:Name="LocalizedElement4" Header="本地账户"/><PivotItem x:Name="LocalizedElement5" Header="云端账户"/>
+                    </Pivot>
+                    <InfoBar x:Name="LocalizedElement6" IsOpen="True" IsClosable="False" Severity="Informational" Title="云端账户"
+                        Message="连接白名单服务器。注册需要与邮箱匹配的未使用激活码；数据同步由你手动控制。"
+                        Visibility="{x:Bind Show(ViewModel.IsCloud), Mode=OneWay}"/>
+                    <Grid ColumnSpacing="8">
+                        <Grid.ColumnDefinitions><ColumnDefinition Width="*"/><ColumnDefinition Width="132"/></Grid.ColumnDefinitions>
+                        <TextBox x:Name="LocalizedElement7" Header="邮箱" Text="{x:Bind ViewModel.Email, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                                 PlaceholderText="name@example.com" MaxLength="254" InputScope="EmailSmtpAddress"/>
+                        <ComboBox x:Name="LocalizedElement8" Grid.Column="1" Header="常用后缀" PlaceholderText="选择后缀" HorizontalAlignment="Stretch"
+                                  ItemsSource="{x:Bind ViewModel.EmailSuffixes}" SelectedItem="{x:Bind ViewModel.SelectedSuffix, Mode=TwoWay}"/>
+                    </Grid>
+                    <TextBox x:Name="LocalizedElement9" Header="昵称" MaxLength="24" Text="{x:Bind ViewModel.Nickname, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                             PlaceholderText="1–24 个字符" Visibility="{x:Bind Show(ViewModel.IsRegistration), Mode=OneWay}"/>
+                    <PasswordBox x:Name="PasswordInput" Header="密码" MaxLength="128" PasswordRevealMode="Peek" PasswordChanged="PasswordChanged"
+                                 GotFocus="PasswordFocusChanged" LostFocus="PasswordFocusLost" KeyUp="PasswordKeyUp"/>
+                    <StackPanel Spacing="8" Visibility="{x:Bind Show(ViewModel.IsRegistration), Mode=OneWay}">
+                        <ProgressBar x:Name="LocalizedElement10" Maximum="100" Value="{x:Bind ViewModel.PasswordStrength, Mode=OneWay}" AutomationProperties.Name="密码要求满足程度"/>
+                        <TextBlock Text="{x:Bind ViewModel.PasswordHint, Mode=OneWay}" FontSize="12" TextWrapping="Wrap" Foreground="{ThemeResource TextFillColorSecondaryBrush}"/>
+                        <PasswordBox x:Name="ConfirmInput" Header="确认密码" MaxLength="128" PasswordRevealMode="Peek" PasswordChanged="ConfirmChanged"
+                                     GotFocus="PasswordFocusChanged" LostFocus="PasswordFocusLost" KeyUp="PasswordKeyUp"/>
+                        <TextBlock x:Name="LocalizedElement11" Text="两次输入的密码不一致" Foreground="{ThemeResource SystemFillColorCriticalBrush}"
+                                   FontSize="12" AutomationProperties.LiveSetting="Polite"
+                                   Visibility="{x:Bind Show(ViewModel.PasswordMismatch), Mode=OneWay}"/>
+                    </StackPanel>
+                    <TextBox x:Name="ActivationInput" Header="25 位激活码" MaxLength="29" FontFamily="Consolas"
+                             PlaceholderText="XXXXX-XXXXX-XXXXX-XXXXX-XXXXX" TextChanging="ActivationChanging"
+                             Visibility="{x:Bind Show(ViewModel.ShowActivation), Mode=OneWay}"/>
+                    <StackPanel Orientation="Horizontal" Spacing="24">
+                        <CheckBox x:Name="LocalizedElement12" Content="记住我" IsChecked="{x:Bind ViewModel.RememberMe, Mode=TwoWay}"/>
+                        <CheckBox x:Name="LocalizedElement13" Content="自动登录" IsChecked="{x:Bind ViewModel.AutoLogin, Mode=TwoWay}"/>
+                    </StackPanel>
+                    <TextBlock x:Name="LocalizedElement14" Text="记住我保存邮箱；本地账户自动登录可用 30 天。云端自动登录受服务器令牌有效期限制，到期需重新登录。" FontSize="12" TextWrapping="Wrap" Foreground="{ThemeResource TextFillColorSecondaryBrush}"/>
+                    <Button Content="{x:Bind ViewModel.SubmitLabel, Mode=OneWay}" Command="{x:Bind ViewModel.SubmitCommand}"
+                            Style="{StaticResource TomatotodoAccentButtonStyle}" HorizontalAlignment="Stretch" Height="40"/>
+                    <HyperlinkButton Content="{x:Bind ViewModel.ToggleLabel, Mode=OneWay}" Command="{x:Bind ViewModel.ToggleRegistrationCommand}" HorizontalAlignment="Center"/>
+                </StackPanel>
+                </ContentControl>
+                <ContentControl IsEnabled="{x:Bind ViewModel.IsReady, Mode=OneWay}" HorizontalContentAlignment="Stretch"
+                                Visibility="{x:Bind Show(ViewModel.IsSignedIn), Mode=OneWay}">
+                <StackPanel Spacing="20">
+                    <Border Padding="16" CornerRadius="8" Background="{ThemeResource CardBackgroundFillColorDefaultBrush}"
+                            BorderBrush="{ThemeResource CardStrokeColorDefaultBrush}" BorderThickness="1">
+                        <StackPanel Spacing="16">
+                            <Grid ColumnSpacing="16">
+                                <Grid.ColumnDefinitions><ColumnDefinition Width="72"/><ColumnDefinition Width="*"/></Grid.ColumnDefinitions>
+                                <PersonPicture x:Name="ProfilePicture" Width="72" Height="72" DisplayName="{x:Bind ViewModel.Nickname, Mode=OneWay}"/>
+                                <StackPanel Grid.Column="1" VerticalAlignment="Center" Spacing="8">
+                                    <TextBlock Text="{x:Bind ViewModel.Nickname, Mode=OneWay}" Style="{StaticResource SubtitleTextBlockStyle}" TextWrapping="Wrap"/>
+                                    <TextBlock Text="{x:Bind ViewModel.IdentityLabel, Mode=OneWay}" TextWrapping="Wrap" FontSize="12"/>
+                                    <Button x:Name="LocalizedElement15" Content="更换头像" Command="{x:Bind ViewModel.ChangeAvatarCommand}"
+                                            Visibility="{x:Bind Show(ViewModel.IsEditingProfile), Mode=OneWay}"/>
+                                </StackPanel>
+                            </Grid>
+                            <StackPanel Spacing="16" Visibility="{x:Bind Show(ViewModel.IsViewingProfile), Mode=OneWay}">
+                                <TextBlock x:Name="LocalizedElement16" Text="个人简介" Style="{StaticResource BodyStrongTextBlockStyle}"/>
+                                <TextBlock Text="{x:Bind ViewModel.ProfileBiography, Mode=OneWay}" TextWrapping="Wrap" Foreground="{ThemeResource TextFillColorSecondaryBrush}"/>
+                                <Button x:Name="LocalizedElement17" Content="修改个人信息" Command="{x:Bind ViewModel.EditProfileCommand}" HorizontalAlignment="Right"/>
+                            </StackPanel>
+                            <StackPanel Spacing="16" Visibility="{x:Bind Show(ViewModel.IsEditingProfile), Mode=OneWay}">
+                            <TextBox x:Name="LocalizedElement18" Header="昵称" Text="{x:Bind ViewModel.Nickname, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" MaxLength="24"/>
+                            <TextBox x:Name="LocalizedElement19" Header="个人简介" Text="{x:Bind ViewModel.Biography, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                                     MaxLength="300" AcceptsReturn="True" TextWrapping="Wrap" MinHeight="104" PlaceholderText="最多 300 个字符"/>
+                            <StackPanel Orientation="Horizontal" Spacing="8" HorizontalAlignment="Right">
+                                <Button x:Name="LocalizedElement20" Content="取消" Command="{x:Bind ViewModel.CancelEditCommand}"/>
+                                <Button x:Name="LocalizedElement21" Content="保存资料" Command="{x:Bind ViewModel.SaveProfileCommand}" Style="{StaticResource TomatotodoAccentButtonStyle}"/>
+                            </StackPanel>
+                            </StackPanel>
+                        </StackPanel>
+                    </Border>
+                    <Border Padding="16" CornerRadius="8" Background="{ThemeResource CardBackgroundFillColorDefaultBrush}"
+                            BorderBrush="{ThemeResource CardStrokeColorDefaultBrush}" BorderThickness="1"
+                            Visibility="{x:Bind Show(ViewModel.IsCloudSignedIn), Mode=OneWay}">
+                        <StackPanel Spacing="12">
+                            <TextBlock x:Name="LocalizedElement22" Text="云端同步" Style="{StaticResource BodyStrongTextBlockStyle}"/>
+                            <TextBlock x:Name="LocalizedElement23" Text="上传保存本机当前数据；拉取会覆盖该账户本机缓存，操作前会再次确认。" TextWrapping="Wrap" FontSize="12"/>
+                            <StackPanel Orientation="Horizontal" Spacing="8" HorizontalAlignment="Right">
+                                <Button x:Name="LocalizedElement24" Content="从云端拉取" Command="{x:Bind ViewModel.PullCloudCommand}"/>
+                                <Button x:Name="LocalizedElement25" Content="上传到云端" Command="{x:Bind ViewModel.PushCloudCommand}" Style="{StaticResource TomatotodoAccentButtonStyle}"/>
+                            </StackPanel>
+                        </StackPanel>
+                    </Border>
+                    <Border Padding="16" CornerRadius="8" Background="{ThemeResource CardBackgroundFillColorDefaultBrush}"
+                            BorderBrush="{ThemeResource CardStrokeColorDefaultBrush}" BorderThickness="1">
+                        <StackPanel Spacing="12">
+                            <TextBlock x:Name="LocalizedElement26" Text="数据迁移" Style="{StaticResource BodyStrongTextBlockStyle}"/>
+                            <TextBlock Text="{x:Bind ViewModel.MigrationDescription, Mode=OneWay}" TextWrapping="Wrap" Foreground="{ThemeResource TextFillColorSecondaryBrush}"/>
+                            <TextBlock x:Name="LocalizedElement27" Text="先登录目标账户验证所有权，再确认覆盖。云端头像上传待对象存储配置。" FontSize="12" TextWrapping="Wrap"/>
+                            <ComboBox x:Name="LocalizedElement28" Header="目标账户" ItemsSource="{x:Bind ViewModel.MigrationTargets}" DisplayMemberPath="DisplayLabel"
+                                      SelectedItem="{x:Bind ViewModel.SelectedTarget, Mode=TwoWay}" HorizontalAlignment="Stretch" PlaceholderText="选择目标账户"/>
+                            <PasswordBox x:Name="TargetPasswordInput" Header="目标账户密码" MaxLength="128" PasswordRevealMode="Peek" PasswordChanged="TargetPasswordChanged"
+                                         GotFocus="PasswordFocusChanged" LostFocus="PasswordFocusLost" KeyUp="PasswordKeyUp"/>
+                            <Button x:Name="LocalizedElement29" Content="迁移并覆盖目标" Command="{x:Bind ViewModel.MigrateCommand}" HorizontalAlignment="Right"
+                                    IsEnabled="{x:Bind ViewModel.HasMigrationTargets, Mode=OneWay}"/>
+                        </StackPanel>
+                    </Border>
+                    <Button x:Name="LocalizedElement30" Content="退出登录" Command="{x:Bind ViewModel.LogoutCommand}" HorizontalAlignment="Stretch" Height="40"/>
+                </StackPanel>
+                </ContentControl>
+            </StackPanel>
+        </ScrollViewer>
+    </Grid>
+</Window>
