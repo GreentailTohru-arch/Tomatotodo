@@ -95,3 +95,9 @@ function applyPhotographicLaptop(device){
  });observer.observe(device);
 }
 document.querySelectorAll('.mockup-laptop').forEach(applyPhotographicLaptop);
+// One animation frame batches scroll progress; pointer glow is local to download cards.
+const readingProgress=document.createElement('div');readingProgress.className='reading-progress';readingProgress.setAttribute('aria-hidden','true');document.body.append(readingProgress);
+let progressFrame=0;
+function updateReadingProgress(){if(progressFrame)return;progressFrame=requestAnimationFrame(()=>{const length=document.documentElement.scrollHeight-innerHeight;readingProgress.style.transform=`scaleX(${length>0?scrollY/length:0})`;progressFrame=0;});}
+if(!reducedMotion){addEventListener('scroll',updateReadingProgress,{passive:true});addEventListener('resize',updateReadingProgress);updateReadingProgress();}
+if(matchMedia('(hover:hover) and (pointer:fine)').matches){document.querySelectorAll('.download-card').forEach(card=>{card.addEventListener('pointermove',event=>{const rect=card.getBoundingClientRect();card.style.setProperty('--pointer-x',`${event.clientX-rect.left}px`);card.style.setProperty('--pointer-y',`${event.clientY-rect.top}px`);});});}
