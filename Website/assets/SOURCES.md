@@ -29,3 +29,7 @@ Create a premium editorial background photograph for the Tomatotodo productivity
 - All seven Windows screenshots were recaptured on 2026-10-03 with the mouse parked outside the client window to exclude the custom cursor glow. The cover was regenerated from these clean assets with cursor-free browser capture.
 
 - hero-wallpaper.png: built-in ImageGen, 2026-10-03. Prompt: premium warm ivory architectural room, sage sculptural ribbon, circular aperture, morning light, quiet left-side negative space; no text, devices, UI or people. Used as a full-screen hero background.
+
+- windows-presets.png and windows-courses.png: actual installed Windows client, light theme, captured on 2026-10-03 with mouse outside the window for the desktop usage guide.
+
+- windows-tools.png and windows-general.png: actual installed Windows client, light theme, captured on 2026-10-03 with the pointer outside the window. All six usage-guide pages now have corresponding real screenshots.

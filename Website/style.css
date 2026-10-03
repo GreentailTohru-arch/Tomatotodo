@@ -34,3 +34,5 @@
 /* Frosted navigation keeps actions legible over the hero wallpaper. */
 .nav{background:rgba(248,248,241,.78);backdrop-filter:blur(22px) saturate(125%);-webkit-backdrop-filter:blur(22px) saturate(125%);border-bottom:1px solid rgba(255,255,255,.7);box-shadow:0 4px 22px rgba(36,56,43,.07);color:#263a2c}.nav nav>a{font-weight:550}.nav nav>a:not(.nav-github){padding:10px 8px;border-radius:12px;transition:background-color .2s,color .2s}.nav nav>a:not(.nav-github):hover{background:rgba(54,93,67,.09);color:#244a31}.nav-github{background:rgba(255,255,255,.56);border-color:rgba(54,93,67,.22)}.nav-github:hover{background:rgba(255,255,255,.88)}
 @supports not (backdrop-filter:blur(1px)){.nav{background:#f5f5ef}}
+
+#guide-image-button{display:block;width:100%;padding:0;border:0;background:none;cursor:zoom-in;border-radius:10px}#guide-image-button:hover{outline:2px solid #365d4350;outline-offset:4px}
