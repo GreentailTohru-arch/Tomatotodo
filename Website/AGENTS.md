@@ -20,3 +20,4 @@
 - Hero navigation uses a light frosted-glass surface with strong text contrast so navigation stays clearly visible over generated wallpaper.
 - Promotional hero, experience and feature sections frame intact real captures in coordinated silver laptop, phone and tablet mockups. Preserve complete screen proportions, device safe edges and responsive spacing; usage-guide images remain unframed for legibility.
 - Laptop promotional framing follows the supplied near-frontal three-quarter view with visible right-side ports and a realistic keyboard deck. Use the generated photographic hardware plus a projective HTML overlay of the original client capture; never regenerate the software screen.
+- Hero device arrangement follows the portrait reference: larger upright phone at left foreground, laptop at right rear, both grounded on one shared tabletop baseline. Background must not place the laptop on a separate raised plinth.

@@ -70,3 +70,13 @@
 .hero-product-label{margin-left:30%}
 .download-app{display:flex;align-items:center;gap:18px;margin-bottom:28px}.download-app img{display:block;width:64px;height:64px;flex:0 0 64px;border-radius:17px;box-shadow:0 8px 18px #101e2430}.download-app strong{font-size:clamp(24px,2.5vw,32px);font-weight:650;letter-spacing:-1px;line-height:1.2}.download-grid article h3{font-size:27px;margin-top:18px}.download-grid article h3>.icon{width:24px;height:24px;flex-basis:24px}
 @media(max-width:760px){.download-app{gap:14px;margin-bottom:24px}.download-app img{width:54px;height:54px;flex-basis:54px;border-radius:14px}.download-app strong{font-size:26px}.download-grid article h3{font-size:24px}}
+/* Hero composition: standing phone and laptop share a tabletop baseline. */
+.hero-product{width:55%;right:1.5%;max-width:980px;transform:translateY(-43%)}
+.hero-laptop{width:100%;transform:none}
+.hero-handset{width:30%;left:-3%;right:auto;bottom:8%;transform:rotate(1deg);z-index:3}
+.hero-product-label{position:absolute;left:35%;bottom:-32px;margin:0;font-size:11px;color:#52654e}
+.hero-product-label small{font-size:8px}
+@media(min-width:1600px){.hero-product{width:52%;right:2%}}
+@media(max-width:1050px) and (min-width:761px){.hero-product{width:56%;right:0}.hero-handset{width:29%;left:0}}
+@media(max-width:760px){.hero-product{width:100%;right:auto;top:auto;margin:55px auto 55px;transform:none}.hero-handset{width:30%;left:0;bottom:8%}.hero-product-label{left:35%;bottom:-34px;font-size:9px}.hero-product-label small{font-size:7px}.immersive-hero{background-position:60% center}}
+.immersive-hero{background-image:url("assets/hero-tabletop-wallpaper.png");background-position:center;background-size:cover}
