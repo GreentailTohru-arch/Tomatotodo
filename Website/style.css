@@ -60,3 +60,11 @@
 @media(min-width:761px){.real-desktop{width:68%;top:140px}.real-tablet{width:44%;top:440px;right:10%}}
 @media(min-width:761px) and (max-width:1050px){.real-tablet{top:365px}.real-desktop{top:125px}}
 .gallery-card .device-mockup{margin:12px auto}.gallery-grid.phone .device-mockup{width:100%;max-width:230px}.gallery-card .device-mockup img{max-width:none;border:0;border-radius:0;box-shadow:none}.gallery-card .laptop-deck{height:32px}
+/* Photographic hardware; the display remains a separate original client capture. */
+.photographic-laptop{padding:0;aspect-ratio:3/2;background:url('assets/laptop-silver-perspective.png') center/100% 100% no-repeat}
+.photographic-laptop .device-screen{position:absolute;left:0;top:0;width:1000px;height:600px;padding:24px;border:0;border-radius:0;background:radial-gradient(ellipse at 80% 80%,#345d96,#bcd4e1 75%);transform-origin:0 0;box-shadow:none;display:flex;align-items:center;justify-content:center;overflow:hidden}
+.photographic-laptop .device-screen:before{display:none}.photographic-laptop .device-screen img{width:90%;height:90%;object-fit:contain;border:0;border-radius:8px;filter:drop-shadow(0 10px 12px #152c4440)}
+.photographic-laptop .laptop-deck{display:none}.hero-laptop{transform:none;width:100%}.real-desktop{transform:none}.feature .mockup-laptop{transform:none}
+.hero-handset{left:0;right:auto;bottom:-2%;transform:rotate(-2deg)}
+@media(max-width:760px){.hero-handset{left:0;right:auto;bottom:-3%}.hero-product-label{margin-left:30%}}
+.hero-product-label{margin-left:30%}

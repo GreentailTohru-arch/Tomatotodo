@@ -32,7 +32,7 @@ function renderGallery(platform){
   const device=document.createElement('div');device.className='device-mockup mockup-'+kind;
   const screen=document.createElement('div');screen.className='device-screen';screen.append(img);device.append(screen);
   if(kind==='laptop'){const deck=document.createElement('div');deck.className='laptop-deck';deck.setAttribute('aria-hidden','true');deck.innerHTML='<span class="keyboard"></span><span class="trackpad"></span>';device.append(deck);}
-  card.append(device,heading,caption);card.addEventListener('click',()=>showImage(img.src,title+' / '+detail));grid.append(card);
+  card.append(device,heading,caption);card.addEventListener('click',()=>showImage(img.src,title+' / '+detail));grid.append(card);if(kind==='laptop')applyPhotographicLaptop(device);
  });
  document.querySelectorAll('[data-gallery]').forEach(button=>button.setAttribute('aria-pressed',String(button.dataset.gallery===platform)));
 }
@@ -74,3 +74,24 @@ function renderDesktopGuide(key){const item=desktopGuide[key];if(!item)return;do
 document.querySelectorAll('[data-guide]').forEach(button=>button.addEventListener('click',()=>renderDesktopGuide(button.dataset.guide)));renderDesktopGuide('dashboard');
 
  document.querySelector('#guide-image-button').addEventListener('click',()=>{const img=document.querySelector('#guide-image');showImage(img.src,img.alt);});
+function applyPhotographicLaptop(device){
+ if(device.dataset.photographic)return;
+ device.dataset.photographic='true';device.classList.add('photographic-laptop');
+ const screen=device.querySelector('.device-screen');
+ const observer=new ResizeObserver(()=>{
+  const k=device.clientWidth/1536;
+  const src=[[0,0],[1000,0],[1000,600],[0,600]];
+  const dest=[[400,166],[1425,115],[1417,743],[386,721]].map(([x,y])=>[x*k,y*k]);
+  const rows=[];
+  src.forEach(([x,y],i)=>{const [u,v]=dest[i];rows.push([x,y,1,0,0,0,-u*x,-u*y,u],[0,0,0,x,y,1,-v*x,-v*y,v]);});
+  for(let c=0;c<8;c++){
+   let pivot=c;for(let r=c+1;r<8;r++)if(Math.abs(rows[r][c])>Math.abs(rows[pivot][c]))pivot=r;
+   [rows[c],rows[pivot]]=[rows[pivot],rows[c]];
+   const factor=rows[c][c];for(let j=c;j<9;j++)rows[c][j]/=factor;
+   for(let r=0;r<8;r++)if(r!==c){const n=rows[r][c];for(let j=c;j<9;j++)rows[r][j]-=n*rows[c][j];}
+  }
+  const [a,b,c,d,e,f,g,h]=rows.map(row=>row[8]);
+  screen.style.transform=`matrix3d(${a},${d},0,${g},${b},${e},0,${h},0,0,1,0,${c},${f},0,1)`;
+ });observer.observe(device);
+}
+document.querySelectorAll('.mockup-laptop').forEach(applyPhotographicLaptop);

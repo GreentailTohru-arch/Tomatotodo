@@ -33,3 +33,4 @@ Create a premium editorial background photograph for the Tomatotodo productivity
 - windows-presets.png and windows-courses.png: actual installed Windows client, light theme, captured on 2026-10-03 with mouse outside the window for the desktop usage guide.
 
 - windows-tools.png and windows-general.png: actual installed Windows client, light theme, captured on 2026-10-03 with the pointer outside the window. All six usage-guide pages now have corresponding real screenshots.
+- laptop-silver-perspective.png: Built-in image_gen hardware cutout, generated 2026-10-03. Reference supplies only laptop camera angle. Screen is blank in the asset; the website inserts untouched actual client screenshots with a four-corner projective transform. Prompt: silver aluminum laptop, nearly frontal three-quarter view, visible right ports, realistic keyboard and trackpad, blank display, transparent background; no app UI, text or logos.
