@@ -26,7 +26,7 @@ function renderGallery(platform){
  shots[platform].forEach(([file,title,detail])=>{
   const card=document.createElement('button');card.className='gallery-card';
   const img=document.createElement('img');img.src='assets/'+file;img.alt=title;img.loading='lazy';
-  const heading=document.createElement('strong');heading.textContent=title+' ↗';
+  const heading=document.createElement('strong');heading.textContent=title; const arrow=document.createElementNS('http://www.w3.org/2000/svg','svg'); arrow.setAttribute('class','icon'); arrow.setAttribute('aria-hidden','true'); const use=document.createElementNS('http://www.w3.org/2000/svg','use'); use.setAttribute('href','#i-arrow-up-right'); arrow.append(use);heading.append(arrow);
   const caption=document.createElement('span');caption.textContent=detail;
   card.append(img,heading,caption);card.addEventListener('click',()=>showImage(img.src,title+' / '+detail));grid.append(card);
  });
