@@ -14,3 +14,5 @@
 - Before capturing real client windows, park the mouse outside the window and verify that neither the pointer nor its glow appears. Render promotional covers with cursor-free browser capture.
 
 - Homepage hero uses a full-viewport generated architectural wallpaper, bold editorial typography and untouched real software screenshots. Preserve readable text contrast and mobile safe spacing.
+
+- Include an interactive Windows usage-guide section covering dashboard, task presets, archive, courses, tools and general settings. Describe verified client behavior; only use existing real screenshots and never fabricate page imagery.
