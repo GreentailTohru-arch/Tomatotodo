@@ -356,7 +356,11 @@ Tomatotodo-1.3.0-… .pdf  保留的两份历史鉴别材料
 - 截图或日志；请先遮挡账户、邮箱等个人信息。
 - 语言问题请注明所选语言，布局问题请注明设备尺寸与横竖屏状态。
 
-修改 Android 工程请运行 `flutter analyze` 和 `flutter test`；Windows 请完成构建并运行相关测试项目。代码的使用、修改和分发条件以明确的许可证为准；README 不替代许可证。
+修改 Android 工程请运行 `flutter analyze` 和 `flutter test`；Windows 请完成构建并运行相关测试项目。
+
+## 开源许可证
+
+本项目采用 [MIT License](LICENSE)。第三方依赖及素材遵循各自的许可证。
 
 ## 致谢
 
