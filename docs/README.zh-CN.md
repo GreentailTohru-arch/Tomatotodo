@@ -1,9 +1,9 @@
 <p align="right">
-  <a href="./README.md">EN</a> | <strong>CN</strong> | <a href="./README.ja.md">JA</a>
+  <a href="../README.md">EN</a> | <strong>CN</strong> | <a href="./README.ja.md">JA</a>
 </p>
 
 <div align="center">
-  <img src="./icon.png" alt="Tomatotodo 图标" width="120">
+  <img src="../.github/assets/icon.png" alt="Tomatotodo 图标" width="120">
   <h1>Tomatotodo</h1>
 </div>
 
@@ -12,17 +12,13 @@
 </p>
 
 <p align="center">
-    <a href="https://github.com/GreentailTohru-arch/Tomatotodo/releases/tag/v1.6.2"><img src="./.github/assets/windows.svg" alt="Windows 1.6.2"></a>
-    <a href="https://github.com/GreentailTohru-arch/Tomatotodo/releases/tag/android-v1.0.3"><img src="./.github/assets/android.svg" alt="Android 1.0.3"></a>
-    <a href="./LICENSE"><img src="./.github/assets/license.svg" alt="MIT"></a>
-</p>
-
-<p align="center">
-  <a href="https://greentailtohru-arch.github.io/Tomatotodo/">官网</a> · <a href="https://github.com/GreentailTohru-arch/Tomatotodo/releases">全部版本</a> · <a href="https://greentailtohru-arch.github.io/Tomatotodo/#desktop-guide">图文指南</a>
+    <a href="https://github.com/GreentailTohru-arch/Tomatotodo/releases/tag/v1.6.2"><img src="../.github/assets/windows.svg" alt="Windows 1.6.2"></a>
+    <a href="https://github.com/GreentailTohru-arch/Tomatotodo/releases/tag/android-v1.0.3"><img src="../.github/assets/android.svg" alt="Android 1.0.3"></a>
+    <a href="../LICENSE"><img src="../.github/assets/license.svg" alt="MIT"></a>
 </p>
 
 <div align="center">
-  <a href="https://greentailtohru-arch.github.io/Tomatotodo/"><img src="./Website/assets/cover.png" width="880" alt="Tomatotodo 的 Windows、Android 手机与平板界面"></a>
+  <a href="https://greentailtohru-arch.github.io/Tomatotodo/"><img src="../Website/assets/cover.png" width="880" alt="Tomatotodo 的 Windows、Android 手机与平板界面"></a>
 </div>
 
 ## 什么是 Tomatotodo？
@@ -42,8 +38,8 @@ Tomatotodo 将任务安排、专注计时和时间记录放在同一个应用中
 
 <table>
   <tr>
-    <td width="50%" align="center"><img src="./Website/assets/windows-dashboard.png" width="420" alt="Windows 仪表盘"><br><sub><b>Windows 仪表盘</b></sub></td>
-    <td width="50%" align="center"><img src="./Website/assets/windows-archive.png" width="420" alt="Windows 专注档案"><br><sub><b>Windows 专注档案</b></sub></td>
+    <td width="50%" align="center"><img src="../Website/assets/windows-dashboard.png" width="420" alt="Windows 仪表盘"><br><sub><b>Windows 仪表盘</b></sub></td>
+    <td width="50%" align="center"><img src="../Website/assets/windows-archive.png" width="420" alt="Windows 专注档案"><br><sub><b>Windows 专注档案</b></sub></td>
   </tr>
 </table>
 
@@ -51,8 +47,8 @@ Tomatotodo 将任务安排、专注计时和时间记录放在同一个应用中
 
 <table>
   <tr>
-    <td width="30%" align="center"><img src="./Website/assets/phone-dashboard.png" width="190" alt="Android 手机仪表盘"><br><sub><b>Android 手机仪表盘</b></sub></td>
-    <td width="70%" align="center"><img src="./Website/assets/tablet-dashboard.png" width="560" alt="Android 平板仪表盘"><br><sub><b>Android 平板仪表盘</b></sub></td>
+    <td width="30%" align="center"><img src="../Website/assets/phone-dashboard.png" width="190" alt="Android 手机仪表盘"><br><sub><b>Android 手机仪表盘</b></sub></td>
+    <td width="70%" align="center"><img src="../Website/assets/tablet-dashboard.png" width="560" alt="Android 平板仪表盘"><br><sub><b>Android 平板仪表盘</b></sub></td>
   </tr>
 </table>
 
@@ -61,12 +57,12 @@ Tomatotodo 将任务安排、专注计时和时间记录放在同一个应用中
 
 <table>
   <tr>
-    <td width="50%" align="center"><img src="./Website/assets/windows-presets.png" width="420" alt="Windows 任务清单"><br><sub><b>Windows 任务清单</b></sub></td>
-    <td width="50%" align="center"><img src="./Website/assets/tablet-courses.png" width="420" alt="Android 平板课程表"><br><sub><b>Android 平板课程表</b></sub></td>
+    <td width="50%" align="center"><img src="../Website/assets/windows-presets.png" width="420" alt="Windows 任务清单"><br><sub><b>Windows 任务清单</b></sub></td>
+    <td width="50%" align="center"><img src="../Website/assets/tablet-courses.png" width="420" alt="Android 平板课程表"><br><sub><b>Android 平板课程表</b></sub></td>
   </tr>
   <tr>
-    <td width="50%" align="center"><img src="./Website/assets/windows-dashboard-dark.png" width="420" alt="Windows 深色外观"><br><sub><b>Windows 深色外观</b></sub></td>
-    <td width="50%" align="center"><img src="./Website/assets/windows-general.png" width="420" alt="Windows 常规设置"><br><sub><b>Windows 常规设置</b></sub></td>
+    <td width="50%" align="center"><img src="../Website/assets/windows-dashboard-dark.png" width="420" alt="Windows 深色外观"><br><sub><b>Windows 深色外观</b></sub></td>
+    <td width="50%" align="center"><img src="../Website/assets/windows-general.png" width="420" alt="Windows 常规设置"><br><sub><b>Windows 常规设置</b></sub></td>
   </tr>
 </table>
 
@@ -108,7 +104,7 @@ Windows 运行 EXE 并按向导完成安装；Android 打开 APK 并按系统提
 
 ## 多设备同步
 
-两端登录同一个云端账户后，可同步任务清单、课程表、计时设置和专注日志。使用应用内的数据迁移功能可将本地数据转入云端。若两端同时修改同一数据分区，按应用提示处理冲突。 [跨平台同步协议](./windows/docs/cross-platform-sync-v2.md)
+两端登录同一个云端账户后，可同步任务清单、课程表、计时设置和专注日志。使用应用内的数据迁移功能可将本地数据转入云端。若两端同时修改同一数据分区，按应用提示处理冲突。 [跨平台同步协议](../windows/docs/cross-platform-sync-v2.md)
 
 ## 应用数据与隐私
 
@@ -118,9 +114,10 @@ Windows 运行 EXE 并按向导完成安装；Android 打开 APK 并按系统提
 
 | 路径 | 内容 | 文档 |
 | --- | --- | --- |
-| [`windows/`](./windows/) | C# / .NET 10 / WinUI 3 客户端 | [Windows 开发说明](./windows/README.md) |
-| [`android/`](./android/) | Flutter / Dart / Kotlin 客户端 | [Android 开发说明](./android/README.md) |
-| [`Website/`](./Website/) | 静态官网和截图 | [官网部署说明](./Website/README.md) |
+| [`windows/`](../windows/) | C# / .NET 10 / WinUI 3 客户端 | [Windows 开发说明](../windows/README.md) |
+| [`android/`](../android/) | Flutter / Dart / Kotlin 客户端 | [Android 开发说明](../android/README.md) |
+| [`Website/`](../Website/) | 静态官网和截图 | [官网部署说明](../Website/README.md) |
+| [`docs/archive/`](./archive/) | 1.3.0 版历史鉴别材料 | — |
 
 ### Windows
 
@@ -136,7 +133,7 @@ dotnet run --project tools/Sync.Tests/Sync.Tests.csproj
 
 ### Android
 
-准备 Flutter、Android SDK 和 JDK 17。Dart 版本约束见 [`pubspec.yaml`](./android/pubspec.yaml)
+准备 Flutter、Android SDK 和 JDK 17。Dart 版本约束见 [`pubspec.yaml`](../android/pubspec.yaml)
 
 ```bash
 cd android
@@ -152,4 +149,4 @@ flutter build apk --release
 
 ## 开源许可证
 
-[MIT](./LICENSE) · 本项目采用 MIT 许可证。
+[MIT](../LICENSE) · 本项目采用 MIT 许可证。

@@ -1,9 +1,9 @@
 <p align="right">
-  <strong>EN</strong> | <a href="./README.zh-CN.md">CN</a> | <a href="./README.ja.md">JA</a>
+  <strong>EN</strong> | <a href="./docs/README.zh-CN.md">CN</a> | <a href="./docs/README.ja.md">JA</a>
 </p>
 
 <div align="center">
-  <img src="./icon.png" alt="Tomatotodo logo" width="120">
+  <img src="./.github/assets/icon.png" alt="Tomatotodo logo" width="120">
   <h1>Tomatotodo</h1>
 </div>
 
@@ -15,10 +15,6 @@
     <a href="https://github.com/GreentailTohru-arch/Tomatotodo/releases/tag/v1.6.2"><img src="./.github/assets/windows.svg" alt="Windows 1.6.2"></a>
     <a href="https://github.com/GreentailTohru-arch/Tomatotodo/releases/tag/android-v1.0.3"><img src="./.github/assets/android.svg" alt="Android 1.0.3"></a>
     <a href="./LICENSE"><img src="./.github/assets/license.svg" alt="MIT"></a>
-</p>
-
-<p align="center">
-  <a href="https://greentailtohru-arch.github.io/Tomatotodo/">Website (Chinese)</a> · <a href="https://github.com/GreentailTohru-arch/Tomatotodo/releases">All releases</a> · <a href="https://greentailtohru-arch.github.io/Tomatotodo/#desktop-guide">Illustrated guide (Chinese)</a>
 </p>
 
 <div align="center">
@@ -121,6 +117,7 @@ Core features are available without an account. You can export user data as JSON
 | [`windows/`](./windows/) | C# / .NET 10 / WinUI 3 client | [Windows development](./windows/README.md) |
 | [`android/`](./android/) | Flutter / Dart / Kotlin client | [Android development](./android/README.md) |
 | [`Website/`](./Website/) | Static website and screenshots | [Website deployment](./Website/README.md) |
+| [`docs/archive/`](./docs/archive/) | Historical identification materials for version 1.3.0 | — |
 
 ### Windows
 

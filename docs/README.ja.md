@@ -1,9 +1,9 @@
 <p align="right">
-  <a href="./README.md">EN</a> | <a href="./README.zh-CN.md">CN</a> | <strong>JA</strong>
+  <a href="../README.md">EN</a> | <a href="./README.zh-CN.md">CN</a> | <strong>JA</strong>
 </p>
 
 <div align="center">
-  <img src="./icon.png" alt="Tomatotodo のロゴ" width="120">
+  <img src="../.github/assets/icon.png" alt="Tomatotodo のロゴ" width="120">
   <h1>Tomatotodo</h1>
 </div>
 
@@ -12,17 +12,13 @@
 </p>
 
 <p align="center">
-    <a href="https://github.com/GreentailTohru-arch/Tomatotodo/releases/tag/v1.6.2"><img src="./.github/assets/windows.svg" alt="Windows 1.6.2"></a>
-    <a href="https://github.com/GreentailTohru-arch/Tomatotodo/releases/tag/android-v1.0.3"><img src="./.github/assets/android.svg" alt="Android 1.0.3"></a>
-    <a href="./LICENSE"><img src="./.github/assets/license.svg" alt="MIT"></a>
-</p>
-
-<p align="center">
-  <a href="https://greentailtohru-arch.github.io/Tomatotodo/">公式サイト（中国語）</a> · <a href="https://github.com/GreentailTohru-arch/Tomatotodo/releases">全リリース</a> · <a href="https://greentailtohru-arch.github.io/Tomatotodo/#desktop-guide">画像付きガイド（中国語）</a>
+    <a href="https://github.com/GreentailTohru-arch/Tomatotodo/releases/tag/v1.6.2"><img src="../.github/assets/windows.svg" alt="Windows 1.6.2"></a>
+    <a href="https://github.com/GreentailTohru-arch/Tomatotodo/releases/tag/android-v1.0.3"><img src="../.github/assets/android.svg" alt="Android 1.0.3"></a>
+    <a href="../LICENSE"><img src="../.github/assets/license.svg" alt="MIT"></a>
 </p>
 
 <div align="center">
-  <a href="https://greentailtohru-arch.github.io/Tomatotodo/"><img src="./Website/assets/cover.png" width="880" alt="Windows、Android スマートフォン、タブレットでの Tomatotodo"></a>
+  <a href="https://greentailtohru-arch.github.io/Tomatotodo/"><img src="../Website/assets/cover.png" width="880" alt="Windows、Android スマートフォン、タブレットでの Tomatotodo"></a>
 </div>
 
 ## Tomatotodo とは
@@ -42,8 +38,8 @@ Tomatotodo は、タスクの計画、集中タイマー、時間の記録をま
 
 <table>
   <tr>
-    <td width="50%" align="center"><img src="./Website/assets/windows-dashboard.png" width="420" alt="Windows のダッシュボード"><br><sub><b>Windows のダッシュボード</b></sub></td>
-    <td width="50%" align="center"><img src="./Website/assets/windows-archive.png" width="420" alt="Windows の集中履歴"><br><sub><b>Windows の集中履歴</b></sub></td>
+    <td width="50%" align="center"><img src="../Website/assets/windows-dashboard.png" width="420" alt="Windows のダッシュボード"><br><sub><b>Windows のダッシュボード</b></sub></td>
+    <td width="50%" align="center"><img src="../Website/assets/windows-archive.png" width="420" alt="Windows の集中履歴"><br><sub><b>Windows の集中履歴</b></sub></td>
   </tr>
 </table>
 
@@ -51,8 +47,8 @@ Tomatotodo は、タスクの計画、集中タイマー、時間の記録をま
 
 <table>
   <tr>
-    <td width="30%" align="center"><img src="./Website/assets/phone-dashboard.png" width="190" alt="Android スマートフォンのダッシュボード"><br><sub><b>Android スマートフォンのダッシュボード</b></sub></td>
-    <td width="70%" align="center"><img src="./Website/assets/tablet-dashboard.png" width="560" alt="Android タブレットのダッシュボード"><br><sub><b>Android タブレットのダッシュボード</b></sub></td>
+    <td width="30%" align="center"><img src="../Website/assets/phone-dashboard.png" width="190" alt="Android スマートフォンのダッシュボード"><br><sub><b>Android スマートフォンのダッシュボード</b></sub></td>
+    <td width="70%" align="center"><img src="../Website/assets/tablet-dashboard.png" width="560" alt="Android タブレットのダッシュボード"><br><sub><b>Android タブレットのダッシュボード</b></sub></td>
   </tr>
 </table>
 
@@ -61,12 +57,12 @@ Tomatotodo は、タスクの計画、集中タイマー、時間の記録をま
 
 <table>
   <tr>
-    <td width="50%" align="center"><img src="./Website/assets/windows-presets.png" width="420" alt="Windows のタスクリスト"><br><sub><b>Windows のタスクリスト</b></sub></td>
-    <td width="50%" align="center"><img src="./Website/assets/tablet-courses.png" width="420" alt="Android タブレットの時間割"><br><sub><b>Android タブレットの時間割</b></sub></td>
+    <td width="50%" align="center"><img src="../Website/assets/windows-presets.png" width="420" alt="Windows のタスクリスト"><br><sub><b>Windows のタスクリスト</b></sub></td>
+    <td width="50%" align="center"><img src="../Website/assets/tablet-courses.png" width="420" alt="Android タブレットの時間割"><br><sub><b>Android タブレットの時間割</b></sub></td>
   </tr>
   <tr>
-    <td width="50%" align="center"><img src="./Website/assets/windows-dashboard-dark.png" width="420" alt="Windows のダークテーマ"><br><sub><b>Windows のダークテーマ</b></sub></td>
-    <td width="50%" align="center"><img src="./Website/assets/windows-general.png" width="420" alt="Windows の設定"><br><sub><b>Windows の設定</b></sub></td>
+    <td width="50%" align="center"><img src="../Website/assets/windows-dashboard-dark.png" width="420" alt="Windows のダークテーマ"><br><sub><b>Windows のダークテーマ</b></sub></td>
+    <td width="50%" align="center"><img src="../Website/assets/windows-general.png" width="420" alt="Windows の設定"><br><sub><b>Windows の設定</b></sub></td>
   </tr>
 </table>
 
@@ -108,7 +104,7 @@ Windows では EXE を実行し、セットアップウィザードに従いま�
 
 ## 複数端末間の同期
 
-両方の端末で同じクラウドアカウントにログインすると、タスクリスト、時間割、タイマー設定、集中ログを同期できます。既存のローカルデータはアプリの移行機能でクラウドに移せます。同じデータ区分を両端末で変更した場合は、画面の案内に従って競合を解決します。 [同期プロトコル](./windows/docs/cross-platform-sync-v2.md)
+両方の端末で同じクラウドアカウントにログインすると、タスクリスト、時間割、タイマー設定、集中ログを同期できます。既存のローカルデータはアプリの移行機能でクラウドに移せます。同じデータ区分を両端末で変更した場合は、画面の案内に従って競合を解決します。 [同期プロトコル](../windows/docs/cross-platform-sync-v2.md)
 
 ## アプリデータとプライバシー
 
@@ -118,9 +114,10 @@ Windows では EXE を実行し、セットアップウィザードに従いま�
 
 | パス | 内容 | ドキュメント |
 | --- | --- | --- |
-| [`windows/`](./windows/) | C# / .NET 10 / WinUI 3 クライアント | [Windows 開発ガイド](./windows/README.md) |
-| [`android/`](./android/) | Flutter / Dart / Kotlin クライアント | [Android 開発ガイド](./android/README.md) |
-| [`Website/`](./Website/) | 静的サイトとスクリーンショット | [サイトのデプロイ手順](./Website/README.md) |
+| [`windows/`](../windows/) | C# / .NET 10 / WinUI 3 クライアント | [Windows 開発ガイド](../windows/README.md) |
+| [`android/`](../android/) | Flutter / Dart / Kotlin クライアント | [Android 開発ガイド](../android/README.md) |
+| [`Website/`](../Website/) | 静的サイトとスクリーンショット | [サイトのデプロイ手順](../Website/README.md) |
+| [`docs/archive/`](./archive/) | バージョン 1.3.0 の保存資料 | — |
 
 ### Windows
 
@@ -136,7 +133,7 @@ dotnet run --project tools/Sync.Tests/Sync.Tests.csproj
 
 ### Android
 
-Flutter、Android SDK、JDK 17 を準備してください。Dart のバージョン要件は次のファイルを参照してください： [`pubspec.yaml`](./android/pubspec.yaml)
+Flutter、Android SDK、JDK 17 を準備してください。Dart のバージョン要件は次のファイルを参照してください： [`pubspec.yaml`](../android/pubspec.yaml)
 
 ```bash
 cd android
@@ -152,4 +149,4 @@ flutter build apk --release
 
 ## ライセンス
 
-[MIT](./LICENSE) · 本プロジェクトは MIT ライセンスで配布されています。
+[MIT](../LICENSE) · 本プロジェクトは MIT ライセンスで配布されています。
