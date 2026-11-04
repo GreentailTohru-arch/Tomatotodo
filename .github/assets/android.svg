@@ -1,9 +1,10 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="124" height="22" viewBox="0 0 124 22" role="img" aria-label="Android 1.0.3">
-  <rect width="80" height="22" fill="#343a40"/>
-  <rect x="80" width="44" height="22" fill="#30643b"/>
-  <g transform="translate(6 3)" fill="#fff"><path d="M1 13a7 7 0 0 1 14 0z"/><path d="M4 7 2.5 4.5M12 7l1.5-2.5" fill="none" stroke="#fff" stroke-linecap="round"/><circle cx="5" cy="10" r=".75" fill="#343a40"/><circle cx="11" cy="10" r=".75" fill="#343a40"/></g>
-  <g fill="#fff" font-family="Verdana, sans-serif" font-size="11">
-    <text x="28" y="15">Android</text>
-    <text x="102" y="15" text-anchor="middle">1.0.3</text>
+<svg xmlns="http://www.w3.org/2000/svg" width="109" height="20" viewBox="0 0 109 20" role="img" aria-label="Android: 1.0.3">
+  <title>Android: 1.0.3</title>
+  <rect width="70" height="20" fill="#555"/>
+  <rect x="70" width="39" height="20" fill="#28623b"/>
+  <g fill="#fff" aria-hidden="true"><path d="M5 13.5a7 7 0 0 1 14 0z"/><path d="m8 8-1.5-2.5M16 8l1.5-2.5" fill="none" stroke="#fff" stroke-linecap="round"/><circle cx="9" cy="11" r=".7" fill="#555"/><circle cx="15" cy="11" r=".7" fill="#555"/></g>
+  <g fill="#fff" text-anchor="middle" font-family="Verdana, Geneva, DejaVu Sans, sans-serif" font-size="11" text-rendering="geometricPrecision">
+    <text x="44.5" y="14">Android</text>
+    <text x="89.5" y="14">1.0.3</text>
   </g>
 </svg>
