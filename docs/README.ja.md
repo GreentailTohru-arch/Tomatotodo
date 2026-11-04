@@ -19,7 +19,7 @@
 </p>
 
 <div align="center">
-  <a href="https://greentailtohru-arch.github.io/Tomatotodo/"><img src="../Website/assets/cover.png" width="880" alt="Windows、Android スマートフォン、タブレットでの Tomatotodo"></a>
+  <a href="https://greentailtohru-arch.github.io/Tomatotodo/"><img src="../website/assets/cover.png" width="880" alt="Windows、Android スマートフォン、タブレットでの Tomatotodo"></a>
 </div>
 
 ## Tomatotodo とは
@@ -39,8 +39,8 @@ Tomatotodo は、タスクの計画、集中タイマー、時間の記録をま
 
 <table>
   <tr>
-    <td width="50%" align="center"><img src="../Website/assets/windows-dashboard.png" width="420" alt="Windows のダッシュボード"><br><sub><b>Windows のダッシュボード</b></sub></td>
-    <td width="50%" align="center"><img src="../Website/assets/windows-archive.png" width="420" alt="Windows の集中履歴"><br><sub><b>Windows の集中履歴</b></sub></td>
+    <td width="50%" align="center"><img src="../website/assets/windows-dashboard.png" width="420" alt="Windows のダッシュボード"><br><sub><b>Windows のダッシュボード</b></sub></td>
+    <td width="50%" align="center"><img src="../website/assets/windows-archive.png" width="420" alt="Windows の集中履歴"><br><sub><b>Windows の集中履歴</b></sub></td>
   </tr>
 </table>
 
@@ -48,8 +48,8 @@ Tomatotodo は、タスクの計画、集中タイマー、時間の記録をま
 
 <table>
   <tr>
-    <td width="30%" align="center"><img src="../Website/assets/phone-dashboard.png" width="190" alt="Android スマートフォンのダッシュボード"><br><sub><b>Android スマートフォンのダッシュボード</b></sub></td>
-    <td width="70%" align="center"><img src="../Website/assets/tablet-dashboard.png" width="560" alt="Android タブレットのダッシュボード"><br><sub><b>Android タブレットのダッシュボード</b></sub></td>
+    <td width="30%" align="center"><img src="../website/assets/phone-dashboard.png" width="190" alt="Android スマートフォンのダッシュボード"><br><sub><b>Android スマートフォンのダッシュボード</b></sub></td>
+    <td width="70%" align="center"><img src="../website/assets/tablet-dashboard.png" width="560" alt="Android タブレットのダッシュボード"><br><sub><b>Android タブレットのダッシュボード</b></sub></td>
   </tr>
 </table>
 
@@ -58,12 +58,12 @@ Tomatotodo は、タスクの計画、集中タイマー、時間の記録をま
 
 <table>
   <tr>
-    <td width="50%" align="center"><img src="../Website/assets/windows-presets.png" width="420" alt="Windows のタスクリスト"><br><sub><b>Windows のタスクリスト</b></sub></td>
-    <td width="50%" align="center"><img src="../Website/assets/tablet-courses.png" width="420" alt="Android タブレットの時間割"><br><sub><b>Android タブレットの時間割</b></sub></td>
+    <td width="50%" align="center"><img src="../website/assets/windows-presets.png" width="420" alt="Windows のタスクリスト"><br><sub><b>Windows のタスクリスト</b></sub></td>
+    <td width="50%" align="center"><img src="../website/assets/tablet-courses.png" width="420" alt="Android タブレットの時間割"><br><sub><b>Android タブレットの時間割</b></sub></td>
   </tr>
   <tr>
-    <td width="50%" align="center"><img src="../Website/assets/windows-dashboard-dark.png" width="420" alt="Windows のダークテーマ"><br><sub><b>Windows のダークテーマ</b></sub></td>
-    <td width="50%" align="center"><img src="../Website/assets/windows-general.png" width="420" alt="Windows の設定"><br><sub><b>Windows の設定</b></sub></td>
+    <td width="50%" align="center"><img src="../website/assets/windows-dashboard-dark.png" width="420" alt="Windows のダークテーマ"><br><sub><b>Windows のダークテーマ</b></sub></td>
+    <td width="50%" align="center"><img src="../website/assets/windows-general.png" width="420" alt="Windows の設定"><br><sub><b>Windows の設定</b></sub></td>
   </tr>
 </table>
 
@@ -117,7 +117,7 @@ Windows では EXE を実行し、セットアップウィザードに従いま�
 | --- | --- | --- |
 | [`windows/`](../windows/) | C# / .NET 10 / WinUI 3 クライアント | [Windows 開発ガイド](../windows/README.md) |
 | [`android/`](../android/) | Flutter / Dart / Kotlin クライアント | [Android 開発ガイド](../android/README.md) |
-| [`Website/`](../Website/) | 静的サイトとスクリーンショット | [サイトのデプロイ手順](../Website/README.md) |
+| [`website/`](../website/) | 静的サイトとスクリーンショット | [サイトのデプロイ手順](../website/README.md) |
 | [`docs/archive/`](./archive/) | バージョン 1.3.0 の保存資料 | — |
 
 ### Windows

@@ -19,7 +19,7 @@
 </p>
 
 <div align="center">
-  <a href="https://greentailtohru-arch.github.io/Tomatotodo/"><img src="./Website/assets/cover.png" width="880" alt="Tomatotodo on Windows, an Android phone, and an Android tablet"></a>
+  <a href="https://greentailtohru-arch.github.io/Tomatotodo/"><img src="./website/assets/cover.png" width="880" alt="Tomatotodo on Windows, an Android phone, and an Android tablet"></a>
 </div>
 
 ## What is Tomatotodo?
@@ -39,8 +39,8 @@ Tomatotodo brings task planning, focus sessions, and time tracking into one app.
 
 <table>
   <tr>
-    <td width="50%" align="center"><img src="./Website/assets/windows-dashboard.png" width="420" alt="Windows dashboard"><br><sub><b>Windows dashboard</b></sub></td>
-    <td width="50%" align="center"><img src="./Website/assets/windows-archive.png" width="420" alt="Windows focus archive"><br><sub><b>Windows focus archive</b></sub></td>
+    <td width="50%" align="center"><img src="./website/assets/windows-dashboard.png" width="420" alt="Windows dashboard"><br><sub><b>Windows dashboard</b></sub></td>
+    <td width="50%" align="center"><img src="./website/assets/windows-archive.png" width="420" alt="Windows focus archive"><br><sub><b>Windows focus archive</b></sub></td>
   </tr>
 </table>
 
@@ -48,8 +48,8 @@ Tomatotodo brings task planning, focus sessions, and time tracking into one app.
 
 <table>
   <tr>
-    <td width="30%" align="center"><img src="./Website/assets/phone-dashboard.png" width="190" alt="Android phone dashboard"><br><sub><b>Android phone dashboard</b></sub></td>
-    <td width="70%" align="center"><img src="./Website/assets/tablet-dashboard.png" width="560" alt="Android tablet dashboard"><br><sub><b>Android tablet dashboard</b></sub></td>
+    <td width="30%" align="center"><img src="./website/assets/phone-dashboard.png" width="190" alt="Android phone dashboard"><br><sub><b>Android phone dashboard</b></sub></td>
+    <td width="70%" align="center"><img src="./website/assets/tablet-dashboard.png" width="560" alt="Android tablet dashboard"><br><sub><b>Android tablet dashboard</b></sub></td>
   </tr>
 </table>
 
@@ -58,12 +58,12 @@ Tomatotodo brings task planning, focus sessions, and time tracking into one app.
 
 <table>
   <tr>
-    <td width="50%" align="center"><img src="./Website/assets/windows-presets.png" width="420" alt="Windows task lists"><br><sub><b>Windows task lists</b></sub></td>
-    <td width="50%" align="center"><img src="./Website/assets/tablet-courses.png" width="420" alt="Android tablet timetable"><br><sub><b>Android tablet timetable</b></sub></td>
+    <td width="50%" align="center"><img src="./website/assets/windows-presets.png" width="420" alt="Windows task lists"><br><sub><b>Windows task lists</b></sub></td>
+    <td width="50%" align="center"><img src="./website/assets/tablet-courses.png" width="420" alt="Android tablet timetable"><br><sub><b>Android tablet timetable</b></sub></td>
   </tr>
   <tr>
-    <td width="50%" align="center"><img src="./Website/assets/windows-dashboard-dark.png" width="420" alt="Windows dark theme"><br><sub><b>Windows dark theme</b></sub></td>
-    <td width="50%" align="center"><img src="./Website/assets/windows-general.png" width="420" alt="Windows settings"><br><sub><b>Windows settings</b></sub></td>
+    <td width="50%" align="center"><img src="./website/assets/windows-dashboard-dark.png" width="420" alt="Windows dark theme"><br><sub><b>Windows dark theme</b></sub></td>
+    <td width="50%" align="center"><img src="./website/assets/windows-general.png" width="420" alt="Windows settings"><br><sub><b>Windows settings</b></sub></td>
   </tr>
 </table>
 
@@ -117,7 +117,7 @@ Core features are available without an account. You can export user data as JSON
 | --- | --- | --- |
 | [`windows/`](./windows/) | C# / .NET 10 / WinUI 3 client | [Windows development](./windows/README.md) |
 | [`android/`](./android/) | Flutter / Dart / Kotlin client | [Android development](./android/README.md) |
-| [`Website/`](./Website/) | Static website and screenshots | [Website deployment](./Website/README.md) |
+| [`website/`](./website/) | Static website and screenshots | [Website deployment](./website/README.md) |
 | [`docs/archive/`](./docs/archive/) | Historical identification materials for version 1.3.0 | — |
 
 ### Windows

@@ -19,7 +19,7 @@
 </p>
 
 <div align="center">
-  <a href="https://greentailtohru-arch.github.io/Tomatotodo/"><img src="../Website/assets/cover.png" width="880" alt="Tomatotodo 的 Windows、Android 手机与平板界面"></a>
+  <a href="https://greentailtohru-arch.github.io/Tomatotodo/"><img src="../website/assets/cover.png" width="880" alt="Tomatotodo 的 Windows、Android 手机与平板界面"></a>
 </div>
 
 ## 什么是 Tomatotodo？
@@ -39,8 +39,8 @@ Tomatotodo 将任务安排、专注计时和时间记录放在同一个应用中
 
 <table>
   <tr>
-    <td width="50%" align="center"><img src="../Website/assets/windows-dashboard.png" width="420" alt="Windows 仪表盘"><br><sub><b>Windows 仪表盘</b></sub></td>
-    <td width="50%" align="center"><img src="../Website/assets/windows-archive.png" width="420" alt="Windows 专注档案"><br><sub><b>Windows 专注档案</b></sub></td>
+    <td width="50%" align="center"><img src="../website/assets/windows-dashboard.png" width="420" alt="Windows 仪表盘"><br><sub><b>Windows 仪表盘</b></sub></td>
+    <td width="50%" align="center"><img src="../website/assets/windows-archive.png" width="420" alt="Windows 专注档案"><br><sub><b>Windows 专注档案</b></sub></td>
   </tr>
 </table>
 
@@ -48,8 +48,8 @@ Tomatotodo 将任务安排、专注计时和时间记录放在同一个应用中
 
 <table>
   <tr>
-    <td width="30%" align="center"><img src="../Website/assets/phone-dashboard.png" width="190" alt="Android 手机仪表盘"><br><sub><b>Android 手机仪表盘</b></sub></td>
-    <td width="70%" align="center"><img src="../Website/assets/tablet-dashboard.png" width="560" alt="Android 平板仪表盘"><br><sub><b>Android 平板仪表盘</b></sub></td>
+    <td width="30%" align="center"><img src="../website/assets/phone-dashboard.png" width="190" alt="Android 手机仪表盘"><br><sub><b>Android 手机仪表盘</b></sub></td>
+    <td width="70%" align="center"><img src="../website/assets/tablet-dashboard.png" width="560" alt="Android 平板仪表盘"><br><sub><b>Android 平板仪表盘</b></sub></td>
   </tr>
 </table>
 
@@ -58,12 +58,12 @@ Tomatotodo 将任务安排、专注计时和时间记录放在同一个应用中
 
 <table>
   <tr>
-    <td width="50%" align="center"><img src="../Website/assets/windows-presets.png" width="420" alt="Windows 任务清单"><br><sub><b>Windows 任务清单</b></sub></td>
-    <td width="50%" align="center"><img src="../Website/assets/tablet-courses.png" width="420" alt="Android 平板课程表"><br><sub><b>Android 平板课程表</b></sub></td>
+    <td width="50%" align="center"><img src="../website/assets/windows-presets.png" width="420" alt="Windows 任务清单"><br><sub><b>Windows 任务清单</b></sub></td>
+    <td width="50%" align="center"><img src="../website/assets/tablet-courses.png" width="420" alt="Android 平板课程表"><br><sub><b>Android 平板课程表</b></sub></td>
   </tr>
   <tr>
-    <td width="50%" align="center"><img src="../Website/assets/windows-dashboard-dark.png" width="420" alt="Windows 深色外观"><br><sub><b>Windows 深色外观</b></sub></td>
-    <td width="50%" align="center"><img src="../Website/assets/windows-general.png" width="420" alt="Windows 常规设置"><br><sub><b>Windows 常规设置</b></sub></td>
+    <td width="50%" align="center"><img src="../website/assets/windows-dashboard-dark.png" width="420" alt="Windows 深色外观"><br><sub><b>Windows 深色外观</b></sub></td>
+    <td width="50%" align="center"><img src="../website/assets/windows-general.png" width="420" alt="Windows 常规设置"><br><sub><b>Windows 常规设置</b></sub></td>
   </tr>
 </table>
 
@@ -117,7 +117,7 @@ Windows 运行 EXE 并按向导完成安装；Android 打开 APK 并按系统提
 | --- | --- | --- |
 | [`windows/`](../windows/) | C# / .NET 10 / WinUI 3 客户端 | [Windows 开发说明](../windows/README.md) |
 | [`android/`](../android/) | Flutter / Dart / Kotlin 客户端 | [Android 开发说明](../android/README.md) |
-| [`Website/`](../Website/) | 静态官网和截图 | [官网部署说明](../Website/README.md) |
+| [`website/`](../website/) | 静态官网和截图 | [官网部署说明](../website/README.md) |
 | [`docs/archive/`](./archive/) | 1.3.0 版历史鉴别材料 | — |
 
 ### Windows
