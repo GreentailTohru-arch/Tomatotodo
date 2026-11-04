@@ -1,112 +1,130 @@
+<p align="right">
+  <strong>EN</strong> | <a href="./README.zh-CN.md">CN</a> | <a href="./README.ja.md">JA</a>
+</p>
+
 <div align="center">
-  <img src="./icon.png" alt="Tomatotodo 图标" width="96">
+  <img src="./icon.png" alt="Tomatotodo logo" width="120">
   <h1>Tomatotodo</h1>
-  <p>适用于 Windows 与 Android 的番茄计时、任务管理与专注记录应用。</p>
-  <p>
-    <a href="https://github.com/GreentailTohru-arch/Tomatotodo/releases/tag/v1.6.2"><img src="./.github/assets/windows.svg" alt="Windows 1.6.2"></a>
-    <a href="https://github.com/GreentailTohru-arch/Tomatotodo/releases/tag/android-v1.0.3"><img src="./.github/assets/android.svg" alt="Android 1.0.3"></a>
-    <a href="./LICENSE"><img src="./.github/assets/license.svg" alt="MIT 许可证"></a>
-  </p>
-  <p>
-    <a href="#下载安装">下载安装</a> ·
-    <a href="#界面预览">界面预览</a> ·
-    <a href="#快速开始">快速开始</a> ·
-    <a href="#从源码构建">从源码构建</a> ·
-    <a href="https://greentailtohru-arch.github.io/Tomatotodo/">官网</a>
-  </p>
-  <a href="https://greentailtohru-arch.github.io/Tomatotodo/"><img src="./Website/assets/cover.png" alt="Tomatotodo 的 Windows、Android 手机与平板界面预览" width="880"></a>
 </div>
 
-## 下载安装
+<p align="center">
+  <em>Pomodoro timing, task lists, and focus history for Windows and Android.</em>
+</p>
 
-| 平台 | 系统要求 | 安装包 | 版本说明 |
-| --- | --- | --- | --- |
-| Windows | Windows 10 2004 或更新版本，x64 | [下载 EXE](https://github.com/GreentailTohru-arch/Tomatotodo/releases/download/v1.6.2/Tomatotodo-Setup-1.6.2.exe) | [1.6.2](https://github.com/GreentailTohru-arch/Tomatotodo/releases/tag/v1.6.2) |
-| Android | Android 7.0 或更新版本，支持手机和平板 | [下载 APK](https://github.com/GreentailTohru-arch/Tomatotodo/releases/download/android-v1.0.3/Tomatotodo-1.0.3.apk) | [1.0.3](https://github.com/GreentailTohru-arch/Tomatotodo/releases/tag/android-v1.0.3) |
+<p align="center">
+    <a href="https://github.com/GreentailTohru-arch/Tomatotodo/releases/tag/v1.6.2"><img src="./.github/assets/windows.svg" alt="Windows 1.6.2"></a>
+    <a href="https://github.com/GreentailTohru-arch/Tomatotodo/releases/tag/android-v1.0.3"><img src="./.github/assets/android.svg" alt="Android 1.0.3"></a>
+    <a href="./LICENSE"><img src="./.github/assets/license.svg" alt="MIT"></a>
+</p>
 
-Windows 下载后运行安装向导；Android 打开 APK，按系统提示安装。当前公开 APK 使用调试证书签名。升级前建议在应用内导出 JSON 备份。历史版本见 [GitHub Releases](https://github.com/GreentailTohru-arch/Tomatotodo/releases)。
+<p align="center">
+  <a href="https://greentailtohru-arch.github.io/Tomatotodo/">Website (Chinese)</a> · <a href="https://github.com/GreentailTohru-arch/Tomatotodo/releases">All releases</a> · <a href="https://greentailtohru-arch.github.io/Tomatotodo/#desktop-guide">Illustrated guide (Chinese)</a>
+</p>
 
-## 界面预览
+<div align="center">
+  <a href="https://greentailtohru-arch.github.io/Tomatotodo/"><img src="./Website/assets/cover.png" width="880" alt="Tomatotodo on Windows, an Android phone, and an Android tablet"></a>
+</div>
 
-### Windows
+## What is Tomatotodo?
+
+Tomatotodo brings task planning, focus sessions, and time tracking into one app. Pick a task, start a timer, and use the focus archive to review where your time went. The Windows and Android clients can be used locally or connected to the same cloud account.
+
+## Supported platforms
+
+| Platform | System requirements | Release notes |
+| --- | --- | --- |
+| Windows | Windows 10 version 2004 or later (including Windows 11), x64 | [1.6.2](https://github.com/GreentailTohru-arch/Tomatotodo/releases/tag/v1.6.2) |
+| Android | Android 7.0 or later; arm64-v8a, armeabi-v7a, x86_64 | [1.0.3](https://github.com/GreentailTohru-arch/Tomatotodo/releases/tag/android-v1.0.3) |
+
+## Showcase
+
+### On your desktop
 
 <table>
   <tr>
-    <td width="50%" align="center"><img src="./Website/assets/windows-dashboard.png" width="420" alt="Windows 仪表盘"><br><sub><b>仪表盘</b> · 选择当前任务、控制计时并编排组件</sub></td>
-    <td width="50%" align="center"><img src="./Website/assets/windows-archive.png" width="420" alt="Windows 专注档案"><br><sub><b>专注档案</b> · 查看日期日志、统计图和年度热力图</sub></td>
+    <td width="50%" align="center"><img src="./Website/assets/windows-dashboard.png" width="420" alt="Windows dashboard"><br><sub><b>Windows dashboard</b></sub></td>
+    <td width="50%" align="center"><img src="./Website/assets/windows-archive.png" width="420" alt="Windows focus archive"><br><sub><b>Windows focus archive</b></sub></td>
   </tr>
 </table>
 
-### Android
+### On phones and tablets
 
 <table>
   <tr>
-    <td width="30%" align="center"><img src="./Website/assets/phone-dashboard.png" width="190" alt="Android 手机仪表盘"><br><sub><b>手机</b> · 底部导航与触控计时</sub></td>
-    <td width="70%" align="center"><img src="./Website/assets/tablet-dashboard.png" width="560" alt="Android 平板仪表盘"><br><sub><b>平板</b> · 侧边导航与多列仪表盘</sub></td>
+    <td width="30%" align="center"><img src="./Website/assets/phone-dashboard.png" width="190" alt="Android phone dashboard"><br><sub><b>Android phone dashboard</b></sub></td>
+    <td width="70%" align="center"><img src="./Website/assets/tablet-dashboard.png" width="560" alt="Android tablet dashboard"><br><sub><b>Android tablet dashboard</b></sub></td>
   </tr>
 </table>
 
 <details>
-<summary>查看更多界面</summary>
+<summary>More views — tasks, courses, and appearance</summary>
 
 <table>
   <tr>
-    <td width="50%" align="center"><img src="./Website/assets/windows-presets.png" width="420" alt="Windows 任务清单"><br><sub>Windows · 配置清单</sub></td>
-    <td width="50%" align="center"><img src="./Website/assets/tablet-courses.png" width="420" alt="Android 平板课程表"><br><sub>Android 平板 · 课程表</sub></td>
+    <td width="50%" align="center"><img src="./Website/assets/windows-presets.png" width="420" alt="Windows task lists"><br><sub><b>Windows task lists</b></sub></td>
+    <td width="50%" align="center"><img src="./Website/assets/tablet-courses.png" width="420" alt="Android tablet timetable"><br><sub><b>Android tablet timetable</b></sub></td>
   </tr>
   <tr>
-    <td align="center"><img src="./Website/assets/windows-dashboard-dark.png" width="420" alt="Windows 深色仪表盘"><br><sub>Windows · 深色外观</sub></td>
-    <td align="center"><img src="./Website/assets/windows-general.png" width="420" alt="Windows 常规设置"><br><sub>Windows · 常规设置</sub></td>
+    <td width="50%" align="center"><img src="./Website/assets/windows-dashboard-dark.png" width="420" alt="Windows dark theme"><br><sub><b>Windows dark theme</b></sub></td>
+    <td width="50%" align="center"><img src="./Website/assets/windows-general.png" width="420" alt="Windows settings"><br><sub><b>Windows settings</b></sub></td>
   </tr>
 </table>
 
 </details>
 
-截图来自 Windows 已安装客户端及 Android 手机、平板模拟器中的实际运行界面。更多页面操作见[官网图文指南](https://greentailtohru-arch.github.io/Tomatotodo/#desktop-guide)。
+The screenshots show the installed Windows client and the Android client running in phone and tablet emulators.
 
-## 快速开始
+## Quick install
 
-1. 在「配置」创建清单并添加任务。可为任务填写副标题和预计番茄数。
-2. 回到「仪表盘」，选择当前任务并开始计时。专注时长、短休与循环方式可在「常规」调整。
-3. 打开「档案」，按日期查看日志，或切换统计周期回顾专注时长。
+- **Windows**: [Download EXE](https://github.com/GreentailTohru-arch/Tomatotodo/releases/download/v1.6.2/Tomatotodo-Setup-1.6.2.exe)
+- **Android**: [Download APK](https://github.com/GreentailTohru-arch/Tomatotodo/releases/download/android-v1.0.3/Tomatotodo-1.0.3.apk)
 
-## 主要功能
+## Features
 
-| 功能 | 说明 |
-| --- | --- |
-| 专注计时 | 自定义专注与短休时长，支持手动循环、自动循环和正向计时。手动循环在阶段结束后等待操作；正向计时从零累计，不自动结束或发放番茄。 |
-| 任务管理 | 管理多份清单，调整任务顺序，设置预计番茄数并跟踪完成状态。 |
-| 仪表盘 | 添加、移除和重排计时器、任务、日历、课程和倒数日等组件。Android 可调整部分组件的尺寸。 |
-| 专注档案 | 按日查看日志，按日、周、月或年查看统计，并通过年度热力图回顾专注记录。 |
-| 课程表 | 按周查看课程时间、教室与教师，设置课前提醒，独立导入或导出课表 JSON。 |
-| 外观与语言 | 支持浅色、深色和自动模式，以及自定义主题色；提供多语言和跟随系统语言选项。 |
+### Focus and tasks
 
-Windows 提供计时小窗和系统托盘；Android 适配手机和平板，并支持桌面小组件。通知是否显示取决于应用设置与系统权限。
+- Set focus and short-break durations; choose manual or automatic cycling, or count up from zero.
+- Manage task lists, reorder tasks, set Pomodoro estimates, and track completion.
 
-## 数据与同步
+### History and timetable
 
-- **本地使用**：计时、任务和专注档案无需登录即可使用。可在「常规」导出用户数据 JSON；课表有独立的导入导出入口。
-- **跨设备同步**：两端登录同一个云端账户后，可同步清单、课程表、计时设置与专注日志。需要把原有本地数据带到云端时，使用应用内的数据迁移入口。
-- **数据范围**：当前计时进度留在本机。Windows 与 Android 的仪表盘布局和外观分别保存；同时修改同一数据分区时，按应用提示处理冲突。
+- Review daily logs, day/week/month/year statistics, and the annual focus heatmap.
+- View the weekly timetable, set course reminders, and import or export timetable JSON independently.
 
-覆盖导入、迁移或清除应用数据前，请先备份。字段与合并规则见[跨平台同步协议](./windows/docs/cross-platform-sync-v2.md)。
+### Interface and widgets
 
-## 从源码构建
+- Arrange dashboard widgets and choose light, dark, or automatic appearance. The interface can follow the system language.
+- Windows includes a floating timer and system tray controls. Android supports resizable dashboard cards and home screen widgets.
 
-| 路径 | 内容 | 文档 |
+## Installation
+
+On Windows, run the EXE and follow the setup wizard. On Android, open the APK and follow the system prompts. The published APK is signed with the project's debug certificate. Export a JSON backup before upgrading.
+
+### First run
+
+1. Create a list and add a task in the task configuration page.
+2. Choose the task on the dashboard and start the timer. Set the focus and break durations in Settings.
+3. Open the focus archive to review the session.
+
+## Multi-device sync
+
+Sign in to the same cloud account on both devices to sync task lists, timetable data, timer settings, and focus logs. Use the in-app migration option to bring existing local data into the cloud account. When both devices change the same data section, follow the conflict prompt. [Sync protocol](./windows/docs/cross-platform-sync-v2.md)
+
+## App data and privacy
+
+Core features are available without an account. You can export user data as JSON for backup or migration. Active timer progress stays on the device; dashboard layouts and appearance settings are maintained separately for each platform. The cloud service is maintained separately from this repository.
+
+## Build from source
+
+| Path | Contents | Documentation |
 | --- | --- | --- |
-| [`windows/`](./windows/) | 原生 Windows 客户端：C#、.NET 10、WinUI 3 | [开发、测试与打包](./windows/README.md) |
-| [`android/`](./android/) | Android 客户端：Flutter、Dart、Kotlin | [运行、测试与打包](./android/README.md) |
-| [`Website/`](./Website/) | 静态官网、截图与图文指南 | [预览与部署](./Website/README.md) |
-
-仓库包含客户端和官网源码；云端服务端单独维护。
-
-<details>
-<summary>展开构建与测试命令</summary>
+| [`windows/`](./windows/) | C# / .NET 10 / WinUI 3 client | [Windows development](./windows/README.md) |
+| [`android/`](./android/) | Flutter / Dart / Kotlin client | [Android development](./android/README.md) |
+| [`Website/`](./Website/) | Static website and screenshots | [Website deployment](./Website/README.md) |
 
 ### Windows
 
-准备 .NET 10 SDK、Windows SDK 和 Visual Studio 的 WinUI 开发工具。可打开 [`Tomatotodo.Windows.slnx`](./windows/Tomatotodo.Windows.slnx)，或从仓库根目录执行：
+Install the .NET 10 SDK, Windows SDK, and Visual Studio WinUI tools.
 
 ```powershell
 cd windows
@@ -118,7 +136,7 @@ dotnet run --project tools/Sync.Tests/Sync.Tests.csproj
 
 ### Android
 
-准备 Flutter SDK、Android SDK 和 JDK 17。Dart SDK 约束见 [`pubspec.yaml`](./android/pubspec.yaml)。
+Install Flutter, the Android SDK, and JDK 17. See the Dart constraint in [`pubspec.yaml`](./android/pubspec.yaml)
 
 ```bash
 cd android
@@ -128,10 +146,10 @@ flutter test
 flutter build apk --release
 ```
 
-</details>
+## Contributing
 
-## 反馈与许可
+[GitHub Issues](https://github.com/GreentailTohru-arch/Tomatotodo/issues) — Report bugs or suggest changes in GitHub Issues. Include the platform, app version, reproduction steps, and expected and actual results. Remove personal data from logs and screenshots.
 
-通过 [GitHub Issues](https://github.com/GreentailTohru-arch/Tomatotodo/issues) 提交问题或建议。报告问题时请注明平台、应用和系统版本，提供复现步骤、预期结果及实际结果；附截图或日志前请移除个人信息。
+## License
 
-项目采用 [MIT 许可证](./LICENSE)。
+[MIT](./LICENSE) · Distributed under the MIT License.
