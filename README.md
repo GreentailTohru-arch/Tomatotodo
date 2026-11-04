@@ -12,14 +12,14 @@
 </p>
 
 <p align="center">
-    <a href="https://github.com/GreentailTohru-arch/Tomatotodo/releases/latest"><img src="https://img.shields.io/github/v/release/GreentailTohru-arch/Tomatotodo?style=flat-square&amp;label=Release&amp;logo=github&amp;logoColor=white&amp;color=9a431c" alt="Latest release"></a>
-    <a href="https://raw.githubusercontent.com/GreentailTohru-arch/Tomatotodo/main/.github/assets/windows-x64.svg"><img src="./.github/assets/windows-x64.svg" alt="Windows x64"></a>
-    <a href="https://raw.githubusercontent.com/GreentailTohru-arch/Tomatotodo/main/.github/assets/android-arm64.svg"><img src="./.github/assets/android-arm64.svg" alt="Android arm64"></a>
+    <a href="https://github.com/GreentailTohru-arch/Tomato-Todo/releases/latest"><img src="https://img.shields.io/github/v/release/GreentailTohru-arch/Tomato-Todo?style=flat-square&amp;label=Release&amp;logo=github&amp;logoColor=white&amp;color=9a431c" alt="Latest release"></a>
+    <a href="https://raw.githubusercontent.com/GreentailTohru-arch/Tomato-Todo/main/.github/assets/windows-x64.svg"><img src="./.github/assets/windows-x64.svg" alt="Windows x64"></a>
+    <a href="https://raw.githubusercontent.com/GreentailTohru-arch/Tomato-Todo/main/.github/assets/android-arm64.svg"><img src="./.github/assets/android-arm64.svg" alt="Android arm64"></a>
     <a href="./LICENSE"><img src="./.github/assets/license.svg" alt="MIT"></a>
 </p>
 
 <div align="center">
-  <a href="https://greentailtohru-arch.github.io/Tomatotodo/"><img src="./Website/assets/cover.png" width="880" alt="Tomatotodo on Windows, an Android phone, and an Android tablet"></a>
+  <a href="https://greentailtohru-arch.github.io/Tomato-Todo/"><img src="./Website/assets/cover.png" width="880" alt="Tomatotodo on Windows, an Android phone, and an Android tablet"></a>
 </div>
 
 ## What is Tomatotodo?
@@ -30,8 +30,8 @@ Tomatotodo brings task planning, focus sessions, and time tracking into one app.
 
 | Platform | System requirements | Release notes |
 | --- | --- | --- |
-| Windows | Windows 10 version 2004 or later (including Windows 11), x64 | [1.6.2](https://github.com/GreentailTohru-arch/Tomatotodo/releases/tag/v1.6.2) |
-| Android | Android 7.0 or later; arm64-v8a, armeabi-v7a, x86_64 | [1.0.3](https://github.com/GreentailTohru-arch/Tomatotodo/releases/tag/android-v1.0.3) |
+| Windows | Windows 10 version 2004 or later (including Windows 11), x64 | [1.6.2](https://github.com/GreentailTohru-arch/Tomato-Todo/releases/tag/v1.6.2) |
+| Android | Android 7.0 or later; arm64-v8a, armeabi-v7a, x86_64 | [1.0.3](https://github.com/GreentailTohru-arch/Tomato-Todo/releases/tag/android-v1.0.3) |
 
 ## Showcase
 
@@ -73,8 +73,8 @@ The screenshots show the installed Windows client and the Android client running
 
 ## Quick install
 
-- **Windows**: [Download EXE](https://github.com/GreentailTohru-arch/Tomatotodo/releases/download/v1.6.2/Tomatotodo-Setup-1.6.2.exe)
-- **Android**: [Download APK](https://github.com/GreentailTohru-arch/Tomatotodo/releases/download/android-v1.0.3/Tomatotodo-1.0.3.apk)
+- **Windows**: [Download EXE](https://github.com/GreentailTohru-arch/Tomato-Todo/releases/download/v1.6.2/Tomatotodo-Setup-1.6.2.exe)
+- **Android**: [Download APK](https://github.com/GreentailTohru-arch/Tomato-Todo/releases/download/android-v1.0.3/Tomatotodo-1.0.3.apk)
 
 ## Features
 
@@ -146,7 +146,7 @@ flutter build apk --release
 
 ## Contributing
 
-[GitHub Issues](https://github.com/GreentailTohru-arch/Tomatotodo/issues) — Report bugs or suggest changes in GitHub Issues. Include the platform, app version, reproduction steps, and expected and actual results. Remove personal data from logs and screenshots.
+[GitHub Issues](https://github.com/GreentailTohru-arch/Tomato-Todo/issues) — Report bugs or suggest changes in GitHub Issues. Include the platform, app version, reproduction steps, and expected and actual results. Remove personal data from logs and screenshots.
 
 ## License
 

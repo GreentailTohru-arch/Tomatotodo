@@ -12,14 +12,14 @@
 </p>
 
 <p align="center">
-    <a href="https://github.com/GreentailTohru-arch/Tomatotodo/releases/latest"><img src="https://img.shields.io/github/v/release/GreentailTohru-arch/Tomatotodo?style=flat-square&amp;label=Release&amp;logo=github&amp;logoColor=white&amp;color=9a431c" alt="最新发布版本"></a>
-    <a href="https://raw.githubusercontent.com/GreentailTohru-arch/Tomatotodo/main/.github/assets/windows-x64.svg"><img src="../.github/assets/windows-x64.svg" alt="Windows x64"></a>
-    <a href="https://raw.githubusercontent.com/GreentailTohru-arch/Tomatotodo/main/.github/assets/android-arm64.svg"><img src="../.github/assets/android-arm64.svg" alt="Android arm64"></a>
+    <a href="https://github.com/GreentailTohru-arch/Tomato-Todo/releases/latest"><img src="https://img.shields.io/github/v/release/GreentailTohru-arch/Tomato-Todo?style=flat-square&amp;label=Release&amp;logo=github&amp;logoColor=white&amp;color=9a431c" alt="最新发布版本"></a>
+    <a href="https://raw.githubusercontent.com/GreentailTohru-arch/Tomato-Todo/main/.github/assets/windows-x64.svg"><img src="../.github/assets/windows-x64.svg" alt="Windows x64"></a>
+    <a href="https://raw.githubusercontent.com/GreentailTohru-arch/Tomato-Todo/main/.github/assets/android-arm64.svg"><img src="../.github/assets/android-arm64.svg" alt="Android arm64"></a>
     <a href="../LICENSE"><img src="../.github/assets/license.svg" alt="MIT"></a>
 </p>
 
 <div align="center">
-  <a href="https://greentailtohru-arch.github.io/Tomatotodo/"><img src="../Website/assets/cover.png" width="880" alt="Tomatotodo 的 Windows、Android 手机与平板界面"></a>
+  <a href="https://greentailtohru-arch.github.io/Tomato-Todo/"><img src="../Website/assets/cover.png" width="880" alt="Tomatotodo 的 Windows、Android 手机与平板界面"></a>
 </div>
 
 ## 什么是 Tomatotodo？
@@ -30,8 +30,8 @@ Tomatotodo 将任务安排、专注计时和时间记录放在同一个应用中
 
 | 平台 | 系统要求 | 版本说明 |
 | --- | --- | --- |
-| Windows | Windows 10 2004 或更新版本（含 Windows 11），x64 | [1.6.2](https://github.com/GreentailTohru-arch/Tomatotodo/releases/tag/v1.6.2) |
-| Android | Android 7.0 或更新版本；arm64-v8a、armeabi-v7a、x86_64 | [1.0.3](https://github.com/GreentailTohru-arch/Tomatotodo/releases/tag/android-v1.0.3) |
+| Windows | Windows 10 2004 或更新版本（含 Windows 11），x64 | [1.6.2](https://github.com/GreentailTohru-arch/Tomato-Todo/releases/tag/v1.6.2) |
+| Android | Android 7.0 或更新版本；arm64-v8a、armeabi-v7a、x86_64 | [1.0.3](https://github.com/GreentailTohru-arch/Tomato-Todo/releases/tag/android-v1.0.3) |
 
 ## 界面展示
 
@@ -73,8 +73,8 @@ Tomatotodo 将任务安排、专注计时和时间记录放在同一个应用中
 
 ## 快速下载
 
-- **Windows**: [下载 EXE](https://github.com/GreentailTohru-arch/Tomatotodo/releases/download/v1.6.2/Tomatotodo-Setup-1.6.2.exe)
-- **Android**: [下载 APK](https://github.com/GreentailTohru-arch/Tomatotodo/releases/download/android-v1.0.3/Tomatotodo-1.0.3.apk)
+- **Windows**: [下载 EXE](https://github.com/GreentailTohru-arch/Tomato-Todo/releases/download/v1.6.2/Tomatotodo-Setup-1.6.2.exe)
+- **Android**: [下载 APK](https://github.com/GreentailTohru-arch/Tomato-Todo/releases/download/android-v1.0.3/Tomatotodo-1.0.3.apk)
 
 ## 主要功能
 
@@ -146,7 +146,7 @@ flutter build apk --release
 
 ## 反馈与贡献
 
-[GitHub Issues](https://github.com/GreentailTohru-arch/Tomatotodo/issues) — 请通过 GitHub Issues 报告问题或提出建议，并提供平台、应用版本、复现步骤、预期结果和实际结果。提交日志或截图前，请移除个人信息。
+[GitHub Issues](https://github.com/GreentailTohru-arch/Tomato-Todo/issues) — 请通过 GitHub Issues 报告问题或提出建议，并提供平台、应用版本、复现步骤、预期结果和实际结果。提交日志或截图前，请移除个人信息。
 
 ## 开源许可证
 

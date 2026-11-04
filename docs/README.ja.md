@@ -12,14 +12,14 @@
 </p>
 
 <p align="center">
-    <a href="https://github.com/GreentailTohru-arch/Tomatotodo/releases/latest"><img src="https://img.shields.io/github/v/release/GreentailTohru-arch/Tomatotodo?style=flat-square&amp;label=Release&amp;logo=github&amp;logoColor=white&amp;color=9a431c" alt="最新リリース"></a>
-    <a href="https://raw.githubusercontent.com/GreentailTohru-arch/Tomatotodo/main/.github/assets/windows-x64.svg"><img src="../.github/assets/windows-x64.svg" alt="Windows x64"></a>
-    <a href="https://raw.githubusercontent.com/GreentailTohru-arch/Tomatotodo/main/.github/assets/android-arm64.svg"><img src="../.github/assets/android-arm64.svg" alt="Android arm64"></a>
+    <a href="https://github.com/GreentailTohru-arch/Tomato-Todo/releases/latest"><img src="https://img.shields.io/github/v/release/GreentailTohru-arch/Tomato-Todo?style=flat-square&amp;label=Release&amp;logo=github&amp;logoColor=white&amp;color=9a431c" alt="最新リリース"></a>
+    <a href="https://raw.githubusercontent.com/GreentailTohru-arch/Tomato-Todo/main/.github/assets/windows-x64.svg"><img src="../.github/assets/windows-x64.svg" alt="Windows x64"></a>
+    <a href="https://raw.githubusercontent.com/GreentailTohru-arch/Tomato-Todo/main/.github/assets/android-arm64.svg"><img src="../.github/assets/android-arm64.svg" alt="Android arm64"></a>
     <a href="../LICENSE"><img src="../.github/assets/license.svg" alt="MIT"></a>
 </p>
 
 <div align="center">
-  <a href="https://greentailtohru-arch.github.io/Tomatotodo/"><img src="../Website/assets/cover.png" width="880" alt="Windows、Android スマートフォン、タブレットでの Tomatotodo"></a>
+  <a href="https://greentailtohru-arch.github.io/Tomato-Todo/"><img src="../Website/assets/cover.png" width="880" alt="Windows、Android スマートフォン、タブレットでの Tomatotodo"></a>
 </div>
 
 ## Tomatotodo とは
@@ -30,8 +30,8 @@ Tomatotodo は、タスクの計画、集中タイマー、時間の記録をま
 
 | プラットフォーム | 動作環境 | リリースノート |
 | --- | --- | --- |
-| Windows | Windows 10 バージョン 2004 以降（Windows 11 を含む）、x64 | [1.6.2](https://github.com/GreentailTohru-arch/Tomatotodo/releases/tag/v1.6.2) |
-| Android | Android 7.0 以降、arm64-v8a・armeabi-v7a・x86_64 | [1.0.3](https://github.com/GreentailTohru-arch/Tomatotodo/releases/tag/android-v1.0.3) |
+| Windows | Windows 10 バージョン 2004 以降（Windows 11 を含む）、x64 | [1.6.2](https://github.com/GreentailTohru-arch/Tomato-Todo/releases/tag/v1.6.2) |
+| Android | Android 7.0 以降、arm64-v8a・armeabi-v7a・x86_64 | [1.0.3](https://github.com/GreentailTohru-arch/Tomato-Todo/releases/tag/android-v1.0.3) |
 
 ## 画面紹介
 
@@ -73,8 +73,8 @@ Tomatotodo は、タスクの計画、集中タイマー、時間の記録をま
 
 ## ダウンロード
 
-- **Windows**: [ダウンロード EXE](https://github.com/GreentailTohru-arch/Tomatotodo/releases/download/v1.6.2/Tomatotodo-Setup-1.6.2.exe)
-- **Android**: [ダウンロード APK](https://github.com/GreentailTohru-arch/Tomatotodo/releases/download/android-v1.0.3/Tomatotodo-1.0.3.apk)
+- **Windows**: [ダウンロード EXE](https://github.com/GreentailTohru-arch/Tomato-Todo/releases/download/v1.6.2/Tomatotodo-Setup-1.6.2.exe)
+- **Android**: [ダウンロード APK](https://github.com/GreentailTohru-arch/Tomato-Todo/releases/download/android-v1.0.3/Tomatotodo-1.0.3.apk)
 
 ## 主な機能
 
@@ -146,7 +146,7 @@ flutter build apk --release
 
 ## フィードバックと貢献
 
-[GitHub Issues](https://github.com/GreentailTohru-arch/Tomatotodo/issues) — 不具合や提案は GitHub Issues に投稿してください。プラットフォーム、アプリのバージョン、再現手順、期待した結果と実際の結果を添えてください。ログや画像から個人情報は削除してください。
+[GitHub Issues](https://github.com/GreentailTohru-arch/Tomato-Todo/issues) — 不具合や提案は GitHub Issues に投稿してください。プラットフォーム、アプリのバージョン、再現手順、期待した結果と実際の結果を添えてください。ログや画像から個人情報は削除してください。
 
 ## ライセンス
 
