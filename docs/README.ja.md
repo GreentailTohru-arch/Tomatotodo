@@ -12,8 +12,8 @@
 </p>
 
 <p align="center">
-    <a href="https://github.com/GreentailTohru-arch/Tomatotodo/releases/tag/v1.6.2"><img src="../.github/assets/windows.svg" alt="Windows 1.6.2"></a>
-    <a href="https://github.com/GreentailTohru-arch/Tomatotodo/releases/tag/android-v1.0.3"><img src="../.github/assets/android.svg" alt="Android 1.0.3"></a>
+    <a href="https://github.com/GreentailTohru-arch/Tomatotodo/releases/download/v1.6.2/Tomatotodo-Setup-1.6.2.exe"><img src="../.github/assets/windows.svg" alt="Windows 1.6.2"></a>
+    <a href="https://github.com/GreentailTohru-arch/Tomatotodo/releases/download/android-v1.0.3/Tomatotodo-1.0.3.apk"><img src="../.github/assets/android.svg" alt="Android 1.0.3"></a>
     <a href="../LICENSE"><img src="../.github/assets/license.svg" alt="MIT"></a>
 </p>
 
