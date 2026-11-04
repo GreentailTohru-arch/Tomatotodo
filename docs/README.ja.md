@@ -12,6 +12,7 @@
 </p>
 
 <p align="center">
+    <a href="https://github.com/GreentailTohru-arch/Tomatotodo/releases/latest"><img src="https://img.shields.io/github/v/release/GreentailTohru-arch/Tomatotodo?style=flat-square&amp;label=Release&amp;logo=github&amp;logoColor=white&amp;color=9a431c" alt="最新リリース"></a>
     <a href="https://github.com/GreentailTohru-arch/Tomatotodo/releases/download/v1.6.2/Tomatotodo-Setup-1.6.2.exe"><img src="../.github/assets/windows.svg" alt="Windows 1.6.2"></a>
     <a href="https://github.com/GreentailTohru-arch/Tomatotodo/releases/download/android-v1.0.3/Tomatotodo-1.0.3.apk"><img src="../.github/assets/android.svg" alt="Android 1.0.3"></a>
     <a href="../LICENSE"><img src="../.github/assets/license.svg" alt="MIT"></a>
