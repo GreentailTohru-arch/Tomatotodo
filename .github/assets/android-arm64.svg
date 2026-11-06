@@ -1,10 +1,10 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="116" height="20" viewBox="0 0 116 20" role="img" aria-label="Android: arm64">
-  <title>Android: arm64</title>
+<svg xmlns="http://www.w3.org/2000/svg" width="109" height="20" viewBox="0 0 109 20" role="img" aria-label="Android: 7.0+">
+  <title>Android: 7.0+</title>
   <rect width="70" height="20" fill="#555"/>
-  <rect x="70" width="46" height="20" fill="#28623b"/>
+  <rect x="70" width="39" height="20" fill="#28623b"/>
   <g fill="#fff" aria-hidden="true"><path d="M5 13.5a7 7 0 0 1 14 0z"/><path d="m8 8-1.5-2.5M16 8l1.5-2.5" fill="none" stroke="#fff" stroke-linecap="round"/><circle cx="9" cy="11" r=".7" fill="#555"/><circle cx="15" cy="11" r=".7" fill="#555"/></g>
   <g fill="#fff" text-anchor="middle" font-family="Verdana, Geneva, DejaVu Sans, sans-serif" font-size="11" text-rendering="geometricPrecision">
     <text x="44.5" y="14">Android</text>
-    <text x="93" y="14">arm64</text>
+    <text x="89.5" y="14">7.0+</text>
   </g>
 </svg>

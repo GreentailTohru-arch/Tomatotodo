@@ -13,8 +13,8 @@
 
 <p align="center">
     <a href="https://github.com/GreentailTohru-arch/Tomatotodo/releases/latest"><img src="https://img.shields.io/github/v/release/GreentailTohru-arch/Tomatotodo?style=flat-square&amp;label=Release&amp;logo=github&amp;logoColor=white&amp;color=9a431c" alt="Latest release"></a>
-    <a href="https://raw.githubusercontent.com/GreentailTohru-arch/Tomatotodo/main/.github/assets/windows-x64.svg"><img src="./.github/assets/windows-x64.svg" alt="Windows x64"></a>
-    <a href="https://raw.githubusercontent.com/GreentailTohru-arch/Tomatotodo/main/.github/assets/android-arm64.svg"><img src="./.github/assets/android-arm64.svg" alt="Android arm64"></a>
+    <a href="https://raw.githubusercontent.com/GreentailTohru-arch/Tomatotodo/main/.github/assets/windows-x64.svg"><img src="./.github/assets/windows-x64.svg" alt="Windows 10+"></a>
+    <a href="https://raw.githubusercontent.com/GreentailTohru-arch/Tomatotodo/main/.github/assets/android-arm64.svg"><img src="./.github/assets/android-arm64.svg" alt="Android 7.0+"></a>
     <a href="./LICENSE"><img src="./.github/assets/license.svg" alt="MIT"></a>
 </p>
 
